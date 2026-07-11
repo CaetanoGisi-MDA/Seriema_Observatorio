@@ -1,4 +1,4 @@
-# Clarim — Observatório
+# Seriema — Observatório
 
 Agregador de notícias por grupos (RSS, sitemap ou entrada manual), com coleta
 diária via GitHub Actions e feed em GitHub Pages, estilo Feedly.
@@ -6,7 +6,7 @@ diária via GitHub Actions e feed em GitHub Pages, estilo Feedly.
 ## Como colocar no ar
 
 1. **Criar o repositório**
-   Crie um repositório público chamado `Observatorio_Clarim` na sua conta e
+   Crie um repositório público chamado `Seriema_Observatorio` na sua conta e
    suba todos estes arquivos (`git init`, `git add .`, `git commit`, `git push`).
 
 2. **Criar a chave do Gemini (Google AI Studio)**
@@ -17,7 +17,7 @@ diária via GitHub Actions e feed em GitHub Pages, estilo Feedly.
 
 3. **Ativar o GitHub Pages**
    **Settings → Pages → Source: Deploy from a branch → Branch: `main` / `root`**
-   O feed fica em `https://<seu-usuário>.github.io/Observatorio_Clarim/`.
+   O feed fica em `https://<seu-usuário>.github.io/Seriema_Observatorio/`.
 
 4. **Criar o token classic**
    **Settings da sua conta → Developer settings → Personal access tokens → Tokens (classic)**
