@@ -260,6 +260,7 @@ def processar_grupo(grupo_id, grupo_cfg):
         print(f"[{grupo_id}] {site['nome']} (modo={modo})")
 
         houve_erro = False
+        mensagem_erro = ""
         try:
             if modo == "rss":
                 novos = coletar_rss(site, ja_conhecidos)
@@ -271,6 +272,7 @@ def processar_grupo(grupo_id, grupo_cfg):
             print(f"  [erro] {site['nome']}: {erro}", file=sys.stderr)
             novos = []
             houve_erro = True
+            mensagem_erro = str(erro)[:200]
 
         for novo in novos:
             novo["id"] = gerar_id(novo["link"])
@@ -283,15 +285,18 @@ def processar_grupo(grupo_id, grupo_cfg):
 
         if houve_erro:
             site["alerta"] = True  # erro real: não espera os 30 dias pra avisar
+            site["motivo_alerta"] = f"Erro na última coleta: {mensagem_erro}"
         elif novos:
             houve_novidade_em.add(site["id"])
             site["ultima_novidade"] = agora_iso()
             site["alerta"] = False
+            site["motivo_alerta"] = None
         else:
             ultima = site.get("ultima_novidade")
             if ultima:
                 dias = (datetime.now(timezone.utc) - datetime.fromisoformat(ultima)).days
                 site["alerta"] = dias >= DIAS_PARA_ALERTA
+                site["motivo_alerta"] = f"Sem novidades há {dias} dias" if site["alerta"] else None
         print(f"  -> {len(novos)} notícia(s) nova(s)")
 
     salvar_dados(grupo_id, itens)
