@@ -16,14 +16,14 @@
         },
         {
           "id": "observatorio-do-clima",
-          "nome": "Observatório do Clima",
+          "nome": "Observatório do Clima (via (o)eco)",
           "modo": "rss",
-          "url_feed": "https://oc.eco.br/feed/",
+          "url_feed": "https://oeco.org.br/author/observatorio-do-clima/feed/",
           "url_sitemap": "",
-          "url_base": "https://oc.eco.br",
+          "url_base": "https://oeco.org.br/source/observatorio-do-clima/",
           "ultima_novidade": null,
-          "alerta": true,
-          "motivo_alerta": "Erro na última coleta: a URL não parece ser um feed RSS/Atom válido (https://oc.eco.br/feed/) — confira se falta um caminho tipo /feed/ no final"
+          "alerta": false,
+          "motivo_alerta": null
         },
         {
           "id": "observatorio-da-mineracao",
