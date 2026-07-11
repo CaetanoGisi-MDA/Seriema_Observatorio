@@ -165,6 +165,7 @@ let shaConfig = null;
 let termoBusca = '';
 let mesAtivo = 'todos';
 let arquivoCache = {}; // chave `${grupoId}:${mes}` -> array de itens já carregados
+const CACHE_BUST = Date.now(); // evita servir versão antiga do CDN do GitHub Pages
 
 function acesso(){
   return {
@@ -230,16 +231,16 @@ async function carregar(){
       shaConfig = dados.sha;
       config = JSON.parse(deBase64(dados.content));
     }catch(e){
-      config = await (await fetch('config.json')).json();
+      config = await (await fetch(`config.json?v=${CACHE_BUST}`, {cache: 'no-store'})).json();
     }
   }else{
-    config = await (await fetch('config.json')).json();
+    config = await (await fetch(`config.json?v=${CACHE_BUST}`, {cache: 'no-store'})).json();
   }
   const idsGrupos = Object.keys(config.grupos);
 
   await Promise.all(idsGrupos.map(async id => {
     try{
-      itensPorGrupo[id] = await (await fetch(`data/${id}.json`)).json();
+      itensPorGrupo[id] = await (await fetch(`data/${id}.json?v=${CACHE_BUST}`, {cache: 'no-store'})).json();
     }catch(e){
       itensPorGrupo[id] = [];
     }
@@ -285,7 +286,7 @@ async function garantirDadosCarregados(){
       const chave = `${id}:${mes}`;
       if(arquivoCache[chave]) return;
       buscas.push(
-        fetch(`data/${id}/${mes}.json`)
+        fetch(`data/${id}/${mes}.json?v=${CACHE_BUST}`, {cache: 'no-store'})
           .then(r => r.ok ? r.json() : [])
           .then(itens => { arquivoCache[chave] = itens; })
           .catch(() => { arquivoCache[chave] = []; })
