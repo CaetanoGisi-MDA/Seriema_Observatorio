@@ -83,6 +83,11 @@
   .vazio strong{display:block;font-family:'Fraunces',serif;font-size:17px;color:var(--ink);margin-bottom:6px;font-weight:600;}
 
   ul.feed{list-style:none;margin:0;padding:0;}
+  li.separador-dia{
+    font-family:'IBM Plex Mono';font-size:11.5px;text-transform:uppercase;letter-spacing:.6px;
+    color:var(--ink-muted);padding:20px 2px 7px;border-bottom:1px solid var(--rule);margin-bottom:10px;
+  }
+  li.separador-dia:first-child{padding-top:0;}
   li.item{background:var(--paper-raised);border:1px solid var(--rule);border-radius:10px;margin-bottom:10px;overflow:hidden;}
   .linha{display:flex;gap:14px;padding:13px 14px;cursor:pointer;align-items:flex-start;}
   .linha:hover{background:#F1F3F1;}
@@ -360,13 +365,38 @@ function renderizarFeed(){
     return;
   }
 
-  conteudo.innerHTML = `<ul class="feed">${itens.map(item => itemHtml(item)).join('')}</ul>`;
+  conteudo.innerHTML = `<ul class="feed">${montarListaComSeparadores(itens)}</ul>`;
 
   conteudo.querySelectorAll('.linha').forEach(linha => {
     linha.addEventListener('click', () => {
       linha.closest('li.item').classList.toggle('aberto');
     });
   });
+}
+
+function chaveDia(iso){
+  return new Date(iso).toDateString();
+}
+
+function formatarCabecalhoDia(iso){
+  const texto = new Date(iso).toLocaleDateString('pt-BR', {
+    weekday: 'long', day: '2-digit', month: 'long', year: 'numeric'
+  });
+  return texto.charAt(0).toUpperCase() + texto.slice(1);
+}
+
+function montarListaComSeparadores(itens){
+  let html = '';
+  let diaAnterior = null;
+  itens.forEach(item => {
+    const dia = chaveDia(item.data_publicacao);
+    if(dia !== diaAnterior){
+      html += `<li class="separador-dia">${formatarCabecalhoDia(item.data_publicacao)}</li>`;
+      diaAnterior = dia;
+    }
+    html += itemHtml(item);
+  });
+  return html;
 }
 
 function itemHtml(item){
