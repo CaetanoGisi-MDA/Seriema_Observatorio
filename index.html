@@ -78,6 +78,12 @@
   .cabecalho{margin-bottom:24px;}
   .cabecalho h1{font-family:'Fraunces',serif;font-size:26px;margin:0 0 4px;font-weight:600;}
   .cabecalho p{margin:0;color:var(--ink-muted);font-size:14px;}
+  .campo-busca{
+    margin-top:14px;width:100%;max-width:360px;padding:9px 12px;border:1px solid var(--rule);
+    border-radius:8px;font-family:'Inter';font-size:14px;background:var(--paper-raised);color:var(--ink);
+  }
+  .campo-busca:focus{outline:2px solid var(--brass);outline-offset:0;}
+  .campo-busca::placeholder{color:var(--ink-muted);}
 
   .vazio{background:var(--paper-raised);border:1px dashed var(--rule);border-radius:10px;padding:36px 24px;text-align:center;color:var(--ink-muted);}
   .vazio strong{display:block;font-family:'Fraunces',serif;font-size:17px;color:var(--ink);margin-bottom:6px;font-weight:600;}
@@ -132,6 +138,7 @@
     <div class="cabecalho">
       <h1 id="tituloFeed">Todas as notícias</h1>
       <p id="subtituloFeed">carregando…</p>
+      <input id="campoBusca" class="campo-busca" type="search" placeholder="Buscar por título, resumo ou fonte…">
     </div>
     <div id="conteudo"></div>
   </main>
@@ -146,6 +153,7 @@ let config = null;
 let itensPorGrupo = {};
 let grupoAtivo = 'todos';
 let shaConfig = null;
+let termoBusca = '';
 
 function acesso(){
   return {
@@ -347,6 +355,10 @@ async function removerSite(grupoId, siteId){
   }catch(e){ alert(`Erro ao salvar: ${e.message}`); }
 }
 
+function normalizar(texto){
+  return (texto || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
 function renderizarFeed(){
   const idsGrupos = grupoAtivo === 'todos' ? Object.keys(config.grupos) : [grupoAtivo];
   let itens = [];
@@ -355,13 +367,27 @@ function renderizarFeed(){
   });
   itens.sort((a,b) => new Date(b.data_publicacao) - new Date(a.data_publicacao));
 
+  const totalAntesDaBusca = itens.length;
+  if(termoBusca.trim()){
+    const alvo = normalizar(termoBusca);
+    itens = itens.filter(item =>
+      normalizar(item.titulo).includes(alvo) ||
+      normalizar(item.resumo).includes(alvo) ||
+      normalizar(item.fonte).includes(alvo)
+    );
+  }
+
   document.getElementById('tituloFeed').textContent = grupoAtivo === 'todos' ? 'Todas as notícias' : config.grupos[grupoAtivo].nome;
-  document.getElementById('subtituloFeed').textContent = `${itens.length} notícia${itens.length===1?'':'s'} no feed`;
+  document.getElementById('subtituloFeed').textContent = termoBusca.trim()
+    ? `${itens.length} de ${totalAntesDaBusca} notícia${totalAntesDaBusca===1?'':'s'} — busca: "${termoBusca.trim()}"`
+    : `${itens.length} notícia${itens.length===1?'':'s'} no feed`;
 
   const conteudo = document.getElementById('conteudo');
 
   if(itens.length === 0){
-    conteudo.innerHTML = `<div class="vazio"><strong>Nenhuma notícia ainda</strong>A coleta roda todo dia às 03:00 (horário de Brasília). Assim que houver novidade nos sites cadastrados, ela aparece aqui.</div>`;
+    conteudo.innerHTML = termoBusca.trim()
+      ? `<div class="vazio"><strong>Nada encontrado</strong>Nenhuma notícia bate com "${termoBusca.trim()}" neste grupo. Tenta outro termo ou limpa a busca.</div>`
+      : `<div class="vazio"><strong>Nenhuma notícia ainda</strong>A coleta roda todo dia às 03:00 (horário de Brasília). Assim que houver novidade nos sites cadastrados, ela aparece aqui.</div>`;
     return;
   }
 
@@ -433,6 +459,12 @@ function itemHtml(item){
 }
 
 carregar();
+
+document.getElementById('campoBusca').addEventListener('input', (e) => {
+  termoBusca = e.target.value;
+  renderizarFeed();
+});
+
 </script>
 </body>
 </html>
