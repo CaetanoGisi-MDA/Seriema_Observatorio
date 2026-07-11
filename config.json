@@ -1,0 +1,53 @@
+{
+  "grupos": {
+    "observatorio": {
+      "nome": "Observatório",
+      "sites": [
+        {
+          "id": "osociobio",
+          "nome": "ÓSocioBio",
+          "modo": "rss",
+          "url_feed": "https://osociobio.org.br/feed/",
+          "url_sitemap": "",
+          "url_base": "https://osociobio.org.br",
+          "ultima_novidade": null,
+          "alerta": false
+        },
+        {
+          "id": "observatorio-do-clima",
+          "nome": "Observatório do Clima",
+          "modo": "rss",
+          "url_feed": "https://oc.eco.br/feed/",
+          "url_sitemap": "",
+          "url_base": "https://oc.eco.br",
+          "ultima_novidade": null,
+          "alerta": false
+        },
+        {
+          "id": "observatorio-da-mineracao",
+          "nome": "Observatório da Mineração",
+          "modo": "rss",
+          "url_feed": "https://observatoriodamineracao.com.br/feed/",
+          "url_sitemap": "",
+          "url_base": "https://observatoriodamineracao.com.br",
+          "ultima_novidade": null,
+          "alerta": false
+        },
+        {
+          "id": "ispn",
+          "nome": "ISPN",
+          "modo": "rss",
+          "url_feed": "https://ispn.org.br/feed/",
+          "url_sitemap": "",
+          "url_base": "https://ispn.org.br",
+          "ultima_novidade": null,
+          "alerta": false
+        }
+      ]
+    },
+    "cultura": {
+      "nome": "Cultura",
+      "sites": []
+    }
+  }
+}

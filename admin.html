@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clarim — Administração</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EEF0EF; --paper-raised:#F8F9F8; --ink:#171A1C; --ink-muted:#666B6F;
+    --rule:#D9DCDA; --brass:#B8842E; --patina:#3A6B63; --erro:#B23A3A;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);}
+  .wrap{max-width:680px;margin:0 auto;padding:32px 20px 80px;}
+  a.voltar{font-family:'IBM Plex Mono';font-size:12px;color:var(--ink-muted);text-decoration:none;}
+  h1{font-family:'Fraunces',serif;font-size:24px;font-weight:700;margin:14px 0 6px;}
+  h2{font-family:'Fraunces',serif;font-size:17px;font-weight:600;margin:0 0 4px;}
+  .lead{color:var(--ink-muted);font-size:14px;margin:0 0 26px;}
+
+  section{background:var(--paper-raised);border:1px solid var(--rule);border-radius:12px;padding:20px 20px 22px;margin-bottom:18px;}
+  .ajuda{font-size:13px;color:var(--ink-muted);line-height:1.55;margin:4px 0 16px;}
+
+  label{display:block;font-size:12.5px;font-weight:600;margin:12px 0 5px;}
+  input,select{width:100%;padding:9px 10px;border:1px solid var(--rule);border-radius:7px;font-family:'Inter';font-size:14px;background:#fff;}
+  input:focus,select:focus{outline:2px solid var(--brass);outline-offset:0;}
+
+  button{cursor:pointer;font-family:'Inter';font-weight:600;font-size:13.5px;border-radius:7px;border:none;padding:9px 16px;margin-top:14px;}
+  .btn-principal{background:var(--ink);color:#fff;}
+  .btn-secundario{background:#fff;border:1px solid var(--rule);color:var(--ink);}
+  .btn-perigo{background:#fff;border:1px solid var(--erro);color:var(--erro);padding:4px 9px;font-size:12px;margin:0;}
+
+  .status{font-family:'IBM Plex Mono';font-size:12px;margin-top:10px;padding:8px 10px;border-radius:6px;display:none;}
+  .status.ok{display:block;background:rgba(58,107,99,.12);color:var(--patina);}
+  .status.erro{display:block;background:rgba(178,58,58,.1);color:var(--erro);}
+  .status.carregando{display:block;background:rgba(0,0,0,.05);color:var(--ink-muted);}
+
+  .site-card{border:1px solid var(--rule);border-radius:8px;padding:10px 12px;margin-top:8px;display:flex;justify-content:space-between;align-items:center;gap:10px;}
+  .site-card .nome{font-weight:600;font-size:13.5px;}
+  .site-card .detalhe{font-family:'IBM Plex Mono';font-size:11px;color:var(--ink-muted);margin-top:2px;word-break:break-all;}
+  .grupo-bloco{margin-top:16px;}
+  .grupo-bloco h3{font-size:14px;margin:0 0 4px;font-family:'Inter';font-weight:600;}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  @media (max-width:520px){.grid2{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="voltar" href="index.html">← voltar para o feed</a>
+  <h1>Administração do Clarim</h1>
+  <p class="lead">Configuração de acesso, grupos/sites monitorados e adição manual de notícias.</p>
+
+  <section id="secAcesso">
+    <h2>Acesso ao repositório</h2>
+    <p class="ajuda">O token fica salvo apenas neste navegador (localStorage) e é usado só para editar o <code>config.json</code> e disparar a coleta manual — a leitura do feed não precisa dele.</p>
+    <label>Seu nome</label>
+    <input id="campoNome" placeholder="Como te chamar aqui">
+    <label>Repositório (usuário/repo)</label>
+    <input id="campoRepo" placeholder="caetanogisi-mda/Observatorio_Clarim">
+    <label>Token classic do GitHub</label>
+    <input id="campoToken" type="password" placeholder="ghp_...">
+    <button class="btn-principal" onclick="salvarAcesso()">Salvar</button>
+    <button class="btn-secundario" onclick="testarAcesso()">Testar conexão</button>
+    <div id="statusAcesso" class="status"></div>
+  </section>
+
+  <section id="secGrupos">
+    <h2>Grupos e sites</h2>
+    <p class="ajuda">
+      <strong>rss</strong> — o site tem feed RSS/Atom; roda sozinho todo dia.<br>
+      <strong>sitemap</strong> — sem RSS, mas o site tem <code>sitemap.xml</code>; roda sozinho, um pouco menos preciso.<br>
+      <strong>manual</strong> — sem RSS nem sitemap; cada notícia precisa ser adicionada por você aqui embaixo, colando o link.
+    </p>
+    <div id="listaGrupos"></div>
+
+    <div class="grupo-bloco">
+      <h3>Adicionar site</h3>
+      <div class="grid2">
+        <div><label>Grupo</label><select id="novoSiteGrupo"></select></div>
+        <div><label>Modo</label>
+          <select id="novoSiteModo" onchange="atualizarCampoUrl()">
+            <option value="rss">rss</option>
+            <option value="sitemap">sitemap</option>
+            <option value="manual">manual</option>
+          </select>
+        </div>
+      </div>
+      <label>Nome do site</label>
+      <input id="novoSiteNome" placeholder="Ex: Agência Pública">
+      <label id="labelNovoSiteUrl">URL do feed RSS</label>
+      <input id="novoSiteUrl" placeholder="https://...">
+      <button class="btn-secundario" onclick="adicionarSite()">Adicionar site</button>
+    </div>
+
+    <div class="grupo-bloco">
+      <h3>Adicionar grupo</h3>
+      <div class="grid2">
+        <div><label>ID (sem espaço/acento)</label><input id="novoGrupoId" placeholder="cultura"></div>
+        <div><label>Nome</label><input id="novoGrupoNome" placeholder="Cultura"></div>
+      </div>
+      <button class="btn-secundario" onclick="adicionarGrupo()">Adicionar grupo</button>
+    </div>
+
+    <div id="statusGrupos" class="status"></div>
+  </section>
+
+  <section id="secManual">
+    <h2>Adicionar notícia manual</h2>
+    <p class="ajuda">Use apenas para sites em modo <strong>manual</strong>. O app busca título, imagem e resumo automaticamente a partir do link — mas isso só cobre essa notícia específica; quando sair uma nova nesse site, volte aqui e cole o link de novo.</p>
+    <label>Grupo</label>
+    <select id="manualGrupo"></select>
+    <label>Link da notícia</label>
+    <input id="manualUrl" placeholder="https://site.com/materia">
+    <button class="btn-principal" onclick="adicionarManual()">Buscar e adicionar</button>
+    <div id="statusManual" class="status"></div>
+  </section>
+</div>
+
+<script>
+let config = null;
+let shaConfig = null;
+
+function acesso(){
+  return {
+    repo: localStorage.getItem('clarim_repo') || '',
+    token: localStorage.getItem('clarim_token') || '',
+  };
+}
+
+function paraBase64(str){
+  const bytes = new TextEncoder().encode(str);
+  let binario = '';
+  bytes.forEach(b => binario += String.fromCharCode(b));
+  return btoa(binario);
+}
+function deBase64(b64){
+  const binario = atob(b64);
+  const bytes = Uint8Array.from(binario, c => c.charCodeAt(0));
+  return new TextDecoder('utf-8').decode(bytes);
+}
+
+async function chamarGitHub(caminho, opcoes = {}){
+  const { repo, token } = acesso();
+  if(!repo || !token) throw new Error('Configure repositório e token primeiro.');
+  const resp = await fetch(`https://api.github.com/repos/${repo}${caminho}`, {
+    ...opcoes,
+    headers: {
+      'Authorization': `token ${token}`,
+      'Accept': 'application/vnd.github+json',
+      ...(opcoes.headers || {}),
+    },
+  });
+  if(!resp.ok){
+    const corpo = await resp.text();
+    throw new Error(`GitHub API ${resp.status}: ${corpo.slice(0,200)}`);
+  }
+  return resp.status === 204 ? null : resp.json();
+}
+
+function mostrarStatus(id, tipo, texto){
+  const el = document.getElementById(id);
+  el.className = `status ${tipo}`;
+  el.textContent = texto;
+}
+
+// ---------- acesso ----------
+function carregarCamposAcesso(){
+  document.getElementById('campoNome').value = localStorage.getItem('clarim_nome') || '';
+  document.getElementById('campoRepo').value = localStorage.getItem('clarim_repo') || '';
+  document.getElementById('campoToken').value = localStorage.getItem('clarim_token') || '';
+}
+
+function salvarAcesso(){
+  localStorage.setItem('clarim_nome', document.getElementById('campoNome').value.trim());
+  localStorage.setItem('clarim_repo', document.getElementById('campoRepo').value.trim());
+  localStorage.setItem('clarim_token', document.getElementById('campoToken').value.trim());
+  mostrarStatus('statusAcesso', 'ok', 'Salvo neste navegador.');
+  carregarConfig();
+}
+
+async function testarAcesso(){
+  mostrarStatus('statusAcesso', 'carregando', 'Testando…');
+  try{
+    const { repo, token } = acesso();
+    const resp = await fetch(`https://api.github.com/repos/${repo}`, {
+      headers: { 'Authorization': `token ${token}` }
+    });
+    if(!resp.ok) throw new Error(`status ${resp.status}`);
+    mostrarStatus('statusAcesso', 'ok', 'Conexão OK.');
+  }catch(e){
+    mostrarStatus('statusAcesso', 'erro', `Falhou: ${e.message}`);
+  }
+}
+
+// ---------- grupos/sites ----------
+async function carregarConfig(){
+  const { repo, token } = acesso();
+  if(!repo || !token) return;
+  try{
+    const dados = await chamarGitHub('/contents/config.json');
+    shaConfig = dados.sha;
+    config = JSON.parse(deBase64(dados.content));
+    renderizarGrupos();
+  }catch(e){
+    mostrarStatus('statusGrupos', 'erro', `Não consegui carregar config.json: ${e.message}`);
+  }
+}
+
+function renderizarGrupos(){
+  const lista = document.getElementById('listaGrupos');
+  const seletores = [document.getElementById('novoSiteGrupo'), document.getElementById('manualGrupo')];
+  seletores.forEach(s => s.innerHTML = '');
+
+  let html = '';
+  Object.entries(config.grupos).forEach(([id, grupo]) => {
+    seletores.forEach(s => s.innerHTML += `<option value="${id}">${grupo.nome}</option>`);
+    html += `<div class="grupo-bloco"><h3>${grupo.nome} <span style="color:var(--ink-muted);font-weight:400;">(${id})</span></h3>`;
+    if(!grupo.sites.length){
+      html += `<p class="ajuda" style="margin:4px 0;">Nenhum site ainda.</p>`;
+    }
+    grupo.sites.forEach(site => {
+      html += `<div class="site-card">
+        <div>
+          <div class="nome">${site.nome} <span style="color:var(--ink-muted);font-weight:400;">— ${site.modo}</span></div>
+          <div class="detalhe">${site.url_feed || site.url_sitemap || site.url_base || ''}</div>
+        </div>
+        <button class="btn-perigo" onclick="removerSite('${id}','${site.id}')">Remover</button>
+      </div>`;
+    });
+    html += `</div>`;
+  });
+  lista.innerHTML = html;
+  atualizarCampoUrl();
+}
+
+async function salvarConfigNoGitHub(mensagem){
+  const conteudo = paraBase64(JSON.stringify(config, null, 2) + '\n');
+  const resposta = await chamarGitHub('/contents/config.json', {
+    method: 'PUT',
+    body: JSON.stringify({ message: mensagem, content: conteudo, sha: shaConfig }),
+  });
+  shaConfig = resposta.content.sha;
+}
+
+function atualizarCampoUrl(){
+  const modo = document.getElementById('novoSiteModo').value;
+  const label = document.getElementById('labelNovoSiteUrl');
+  label.textContent = modo === 'rss' ? 'URL do feed RSS' : modo === 'sitemap' ? 'URL do sitemap.xml' : 'URL do site (não roda sozinho)';
+}
+
+async function adicionarSite(){
+  try{
+    const grupoId = document.getElementById('novoSiteGrupo').value;
+    const modo = document.getElementById('novoSiteModo').value;
+    const nome = document.getElementById('novoSiteNome').value.trim();
+    const url = document.getElementById('novoSiteUrl').value.trim();
+    if(!grupoId || !nome || !url) throw new Error('Preencha grupo, nome e URL.');
+
+    const id = nome.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+    const site = {
+      id, nome, modo,
+      url_feed: modo === 'rss' ? url : '',
+      url_sitemap: modo === 'sitemap' ? url : '',
+      url_base: modo === 'manual' ? url : '',
+      ultima_novidade: null,
+      alerta: false,
+    };
+    config.grupos[grupoId].sites.push(site);
+    mostrarStatus('statusGrupos', 'carregando', 'Salvando…');
+    await salvarConfigNoGitHub(`Adiciona site ${nome} em ${grupoId}`);
+    mostrarStatus('statusGrupos', 'ok', `Site "${nome}" adicionado.`);
+    renderizarGrupos();
+  }catch(e){
+    mostrarStatus('statusGrupos', 'erro', e.message);
+  }
+}
+
+async function removerSite(grupoId, siteId){
+  try{
+    config.grupos[grupoId].sites = config.grupos[grupoId].sites.filter(s => s.id !== siteId);
+    mostrarStatus('statusGrupos', 'carregando', 'Salvando…');
+    await salvarConfigNoGitHub(`Remove site ${siteId} de ${grupoId}`);
+    mostrarStatus('statusGrupos', 'ok', 'Site removido.');
+    renderizarGrupos();
+  }catch(e){
+    mostrarStatus('statusGrupos', 'erro', e.message);
+  }
+}
+
+async function adicionarGrupo(){
+  try{
+    const id = document.getElementById('novoGrupoId').value.trim();
+    const nome = document.getElementById('novoGrupoNome').value.trim();
+    if(!id || !nome) throw new Error('Preencha ID e nome do grupo.');
+    if(config.grupos[id]) throw new Error('Já existe um grupo com esse ID.');
+    config.grupos[id] = { nome, sites: [] };
+    mostrarStatus('statusGrupos', 'carregando', 'Salvando…');
+    await salvarConfigNoGitHub(`Adiciona grupo ${nome}`);
+    mostrarStatus('statusGrupos', 'ok', `Grupo "${nome}" adicionado. Crie também data/${id}.json manualmente com "[]" caso o feed não mostre a aba.`);
+    renderizarGrupos();
+  }catch(e){
+    mostrarStatus('statusGrupos', 'erro', e.message);
+  }
+}
+
+// ---------- notícia manual ----------
+async function adicionarManual(){
+  try{
+    const grupoId = document.getElementById('manualGrupo').value;
+    const url = document.getElementById('manualUrl').value.trim();
+    if(!grupoId || !url) throw new Error('Preencha grupo e link.');
+
+    mostrarStatus('statusManual', 'carregando', 'Disparando a coleta desta notícia…');
+    await chamarGitHub('/actions/workflows/coletar.yml/dispatches', {
+      method: 'POST',
+      body: JSON.stringify({ ref: 'main', inputs: { grupo: grupoId, url } }),
+    });
+    mostrarStatus('statusManual', 'ok', 'Disparado. Em 1-2 minutos a notícia aparece no feed (a Action busca título/imagem/resumo automaticamente).');
+    document.getElementById('manualUrl').value = '';
+  }catch(e){
+    mostrarStatus('statusManual', 'erro', e.message);
+  }
+}
+
+carregarCamposAcesso();
+carregarConfig();
+</script>
+</body>
+</html>
