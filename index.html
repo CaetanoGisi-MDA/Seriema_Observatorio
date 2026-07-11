@@ -45,6 +45,17 @@
   .grupo-nav .contagem{font-family:'IBM Plex Mono';font-size:11px;color:var(--sidebar-text-dim);}
 
   .fontes-titulo{font-family:'IBM Plex Mono';font-size:10.5px;text-transform:uppercase;letter-spacing:1px;color:var(--sidebar-text-dim);margin:0 0 10px;padding:0 10px;}
+  .fontes-titulo-linha{display:flex;justify-content:space-between;align-items:center;padding:0 10px;margin:14px 0 8px;}
+  .fontes-titulo-linha .fontes-titulo{margin:0;padding:0;}
+  .mini-acoes{display:flex;gap:6px;}
+  .mini-acoes button{background:none;border:none;color:var(--sidebar-text-dim);font-family:'IBM Plex Mono';font-size:10px;cursor:pointer;padding:0;text-decoration:underline;text-underline-offset:2px;}
+  .mini-acoes button:hover{color:var(--brass);}
+  .ajuda-vazia{padding:0 10px;font-size:12px;color:var(--sidebar-text-dim);margin:0 0 8px;}
+  .acao-gerenciar{color:var(--brass) !important;font-family:'IBM Plex Mono';font-size:12px !important;}
+  .btn-remover-site{background:none;border:none;color:var(--sidebar-text-dim);cursor:pointer;font-size:14px;margin-left:auto;padding:0 2px;line-height:1;}
+  .btn-remover-site:hover{color:#D9534F;}
+  .link-config{display:block;padding:10px 10px 0;font-family:'IBM Plex Mono';font-size:11px;color:var(--brass);text-decoration:none;line-height:1.5;}
+  .link-config:hover{text-decoration:underline;}
   .fonte-item{display:flex;align-items:center;gap:8px;padding:5px 10px;font-size:13px;color:var(--sidebar-text-dim);}
   .ponto{width:6px;height:6px;border-radius:50%;background:var(--patina);flex-shrink:0;}
   .ponto.alerta{background:var(--brass);}
@@ -129,6 +140,53 @@ const ICONE_NOVO = `<svg class="novo-icone" viewBox="0 0 24 24" fill="none" xmln
 let config = null;
 let itensPorGrupo = {};
 let grupoAtivo = 'todos';
+let shaConfig = null;
+
+function acesso(){
+  return {
+    repo: localStorage.getItem('clarim_repo') || '',
+    token: localStorage.getItem('clarim_token') || '',
+  };
+}
+function temAcesso(){
+  const { repo, token } = acesso();
+  return !!(repo && token);
+}
+function paraBase64(str){
+  const bytes = new TextEncoder().encode(str);
+  let binario = '';
+  bytes.forEach(b => binario += String.fromCharCode(b));
+  return btoa(binario);
+}
+function deBase64(b64){
+  const binario = atob(b64);
+  const bytes = Uint8Array.from(binario, c => c.charCodeAt(0));
+  return new TextDecoder('utf-8').decode(bytes);
+}
+async function chamarGitHub(caminho, opcoes = {}){
+  const { repo, token } = acesso();
+  const resp = await fetch(`https://api.github.com/repos/${repo}${caminho}`, {
+    ...opcoes,
+    headers: {
+      'Authorization': `token ${token}`,
+      'Accept': 'application/vnd.github+json',
+      ...(opcoes.headers || {}),
+    },
+  });
+  if(!resp.ok){
+    const corpo = await resp.text();
+    throw new Error(`GitHub API ${resp.status}: ${corpo.slice(0,200)}`);
+  }
+  return resp.status === 204 ? null : resp.json();
+}
+async function salvarConfigNoGitHub(mensagem){
+  const conteudo = paraBase64(JSON.stringify(config, null, 2) + '\n');
+  const resposta = await chamarGitHub('/contents/config.json', {
+    method: 'PUT',
+    body: JSON.stringify({ message: mensagem, content: conteudo, sha: shaConfig }),
+  });
+  shaConfig = resposta.content.sha;
+}
 
 function diasDesde(isoDate){
   const then = new Date(isoDate);
@@ -142,7 +200,17 @@ function formatarData(iso){
 }
 
 async function carregar(){
-  config = await (await fetch('config.json')).json();
+  if(temAcesso()){
+    try{
+      const dados = await chamarGitHub('/contents/config.json');
+      shaConfig = dados.sha;
+      config = JSON.parse(deBase64(dados.content));
+    }catch(e){
+      config = await (await fetch('config.json')).json();
+    }
+  }else{
+    config = await (await fetch('config.json')).json();
+  }
   const idsGrupos = Object.keys(config.grupos);
 
   await Promise.all(idsGrupos.map(async id => {
@@ -167,12 +235,15 @@ function montarNavGrupos(idsGrupos){
     const nome = config.grupos[id].nome;
     linhas.push(`<li><button data-grupo="${id}">${nome}<span class="contagem">${itensPorGrupo[id].length}</span></button></li>`);
   });
+  if(temAcesso()){
+    linhas.push(`<li><button class="acao-gerenciar" onclick="adicionarGrupo()">+ Novo grupo</button></li>`);
+  }
   nav.innerHTML = linhas.join('');
 
-  nav.querySelectorAll('button').forEach(btn => {
+  nav.querySelectorAll('button[data-grupo]').forEach(btn => {
     btn.addEventListener('click', () => {
       grupoAtivo = btn.dataset.grupo;
-      nav.querySelectorAll('button').forEach(b => b.classList.remove('ativo'));
+      nav.querySelectorAll('button[data-grupo]').forEach(b => b.classList.remove('ativo'));
       btn.classList.add('ativo');
       renderizarFeed();
     });
@@ -181,18 +252,94 @@ function montarNavGrupos(idsGrupos){
 
 function montarListaFontes(idsGrupos){
   const container = document.getElementById('listaFontes');
+  const gerenciar = temAcesso();
   let html = '';
   idsGrupos.forEach(id => {
     const grupo = config.grupos[id];
-    if(!grupo.sites.length) return;
-    html += `<div class="fontes-titulo">${grupo.nome}</div>`;
+    html += `<div class="fontes-titulo-linha">
+      <span class="fontes-titulo">${grupo.nome}</span>
+      ${gerenciar ? `<span class="mini-acoes">
+        <button title="Adicionar site" onclick="adicionarSite('${id}')">+site</button>
+        <button title="Remover grupo" onclick="removerGrupo('${id}')">remover</button>
+      </span>` : ''}
+    </div>`;
+    if(!grupo.sites.length){
+      html += `<p class="ajuda-vazia">Nenhum site ainda.</p>`;
+    }
     grupo.sites.forEach(site => {
       const alerta = site.alerta;
       const tip = alerta ? ` data-tip="Sem novidades há 30+ dias — este site pode estar quebrado e precisar de revisão."` : '';
-      html += `<div class="fonte-item"${tip}><span class="ponto ${alerta ? 'alerta' : ''}"></span>${site.nome}</div>`;
+      html += `<div class="fonte-item"${tip}>
+        <span class="ponto ${alerta ? 'alerta' : ''}"></span>${site.nome}
+        ${gerenciar ? `<button class="btn-remover-site" title="Remover site" onclick="removerSite('${id}','${site.id}')">×</button>` : ''}
+      </div>`;
     });
   });
+  if(!gerenciar){
+    html += `<a class="link-config" href="admin.html">Configure o acesso para gerenciar grupos e sites →</a>`;
+  }
   container.innerHTML = html;
+}
+
+async function adicionarGrupo(){
+  const id = prompt('ID do grupo (sem espaço/acento, ex: cultura):');
+  if(!id) return;
+  if(config.grupos[id]){ alert('Já existe um grupo com esse ID.'); return; }
+  const nome = prompt('Nome de exibição do grupo:', id);
+  if(!nome) return;
+  config.grupos[id] = { nome, sites: [] };
+  try{
+    await salvarConfigNoGitHub(`Adiciona grupo ${nome}`);
+    itensPorGrupo[id] = [];
+    montarNavGrupos(Object.keys(config.grupos));
+    montarListaFontes(Object.keys(config.grupos));
+  }catch(e){ alert(`Erro ao salvar: ${e.message}`); }
+}
+
+async function removerGrupo(grupoId){
+  const nome = config.grupos[grupoId].nome;
+  if(!confirm(`Remover o grupo "${nome}" e todos os seus sites da configuração? As notícias já coletadas continuam no arquivo de dados, só não aparecem mais.`)) return;
+  delete config.grupos[grupoId];
+  try{
+    await salvarConfigNoGitHub(`Remove grupo ${nome}`);
+    delete itensPorGrupo[grupoId];
+    if(grupoAtivo === grupoId) grupoAtivo = 'todos';
+    montarNavGrupos(Object.keys(config.grupos));
+    montarListaFontes(Object.keys(config.grupos));
+    renderizarFeed();
+  }catch(e){ alert(`Erro ao salvar: ${e.message}`); }
+}
+
+async function adicionarSite(grupoId){
+  const nome = prompt('Nome do site:');
+  if(!nome) return;
+  const modo = prompt('Modo: digite "rss", "sitemap" ou "manual"', 'rss');
+  if(!modo || !['rss','sitemap','manual'].includes(modo)) { alert('Modo inválido.'); return; }
+  const url = prompt(modo === 'rss' ? 'URL do feed RSS:' : modo === 'sitemap' ? 'URL do sitemap.xml:' : 'URL do site:');
+  if(!url) return;
+
+  const id = nome.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+  config.grupos[grupoId].sites.push({
+    id, nome, modo,
+    url_feed: modo === 'rss' ? url : '',
+    url_sitemap: modo === 'sitemap' ? url : '',
+    url_base: modo === 'manual' ? url : '',
+    ultima_novidade: null,
+    alerta: false,
+  });
+  try{
+    await salvarConfigNoGitHub(`Adiciona site ${nome} em ${grupoId}`);
+    montarListaFontes(Object.keys(config.grupos));
+  }catch(e){ alert(`Erro ao salvar: ${e.message}`); }
+}
+
+async function removerSite(grupoId, siteId){
+  if(!confirm('Remover este site do grupo?')) return;
+  config.grupos[grupoId].sites = config.grupos[grupoId].sites.filter(s => s.id !== siteId);
+  try{
+    await salvarConfigNoGitHub(`Remove site ${siteId} de ${grupoId}`);
+    montarListaFontes(Object.keys(config.grupos));
+  }catch(e){ alert(`Erro ao salvar: ${e.message}`); }
 }
 
 function renderizarFeed(){
