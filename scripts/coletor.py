@@ -237,10 +237,23 @@ def coletar_rss(site, ja_conhecidos):
             f"({site.get('url_feed')}) — confira se falta um caminho tipo /feed/ no final"
         )
 
+    ano_atual = datetime.now(timezone.utc).year
+    ignoradas_por_ano = 0
+
     for entrada in feed.entries:
         link = entrada.get("link", "").strip()
         if not link or link in ja_conhecidos:
             continue
+
+        if "published_parsed" in entrada and entrada.published_parsed:
+            data_pub = datetime(*entrada.published_parsed[:6], tzinfo=timezone.utc).isoformat()
+        else:
+            data_pub = agora_iso()
+
+        if datetime.fromisoformat(data_pub).year < ano_atual:
+            ignoradas_por_ano += 1
+            continue
+
         titulo = entrada.get("title", "(sem título)")
         resumo_bruto = entrada.get("summary", "") or entrada.get("description", "")
         resumo_bruto = BeautifulSoup(resumo_bruto, "html.parser").get_text(" ", strip=True)
@@ -251,10 +264,6 @@ def coletar_rss(site, ja_conhecidos):
             except Exception as erro:  # noqa: BLE001
                 print(f"  [aviso] sem thumbnail via OG para {link}: {erro}", file=sys.stderr)
                 thumbnail = ""
-        if "published_parsed" in entrada and entrada.published_parsed:
-            data_pub = datetime(*entrada.published_parsed[:6], tzinfo=timezone.utc).isoformat()
-        else:
-            data_pub = agora_iso()
 
         novos.append({
             "link": link,
@@ -263,6 +272,9 @@ def coletar_rss(site, ja_conhecidos):
             "resumo": gerar_resumo(titulo, resumo_bruto),
             "data_publicacao": data_pub,
         })
+
+    if ignoradas_por_ano:
+        print(f"  [info] {ignoradas_por_ano} notícia(s) de antes de {ano_atual} ignorada(s)")
     return novos
 
 
@@ -355,7 +367,10 @@ def processar_grupo(grupo_id, grupo_cfg):
                 site["motivo_alerta"] = f"Sem novidades há {dias} dias" if site["alerta"] else None
         print(f"  -> {len(novos)} notícia(s) nova(s)")
 
+    total_antes = len(itens)
     itens = arquivar_antigos(grupo_id, itens, grupo_cfg)
+    arquivadas = total_antes - len(itens)
+    print(f"[{grupo_id}] arquivamento: {arquivadas} notícia(s) movida(s) para arquivo mensal, {len(itens)} continuam no feed atual")
     salvar_dados(grupo_id, itens)
 
 
