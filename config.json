@@ -11,7 +11,8 @@
           "url_sitemap": "",
           "url_base": "https://osociobio.org.br",
           "ultima_novidade": "2026-07-11T21:12:21.352534+00:00",
-          "alerta": false
+          "alerta": false,
+          "motivo_alerta": null
         },
         {
           "id": "observatorio-do-clima",
@@ -21,7 +22,8 @@
           "url_sitemap": "",
           "url_base": "https://oc.eco.br",
           "ultima_novidade": null,
-          "alerta": true
+          "alerta": true,
+          "motivo_alerta": "Erro na última coleta: a URL não parece ser um feed RSS/Atom válido (https://oc.eco.br/feed/) — confira se falta um caminho tipo /feed/ no final"
         },
         {
           "id": "observatorio-da-mineracao",
@@ -31,7 +33,8 @@
           "url_sitemap": "",
           "url_base": "https://observatoriodamineracao.com.br",
           "ultima_novidade": "2026-07-11T21:12:23.369055+00:00",
-          "alerta": false
+          "alerta": false,
+          "motivo_alerta": null
         },
         {
           "id": "ispn",
@@ -41,7 +44,8 @@
           "url_sitemap": "",
           "url_base": "https://ispn.org.br",
           "ultima_novidade": "2026-07-11T21:12:26.259175+00:00",
-          "alerta": false
+          "alerta": false,
+          "motivo_alerta": null
         },
         {
           "id": "sumauma",
@@ -51,7 +55,8 @@
           "url_sitemap": "",
           "url_base": "",
           "ultima_novidade": "2026-07-11T21:12:34.392699+00:00",
-          "alerta": false
+          "alerta": false,
+          "motivo_alerta": null
         }
       ]
     }
