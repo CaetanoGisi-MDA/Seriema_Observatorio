@@ -40,6 +40,7 @@ HEADERS = {
 }
 
 DIAS_PARA_ALERTA = 30
+DIAS_PARA_ARQUIVAR = 30
 
 
 # ---------------------------------------------------------------------------
@@ -86,6 +87,61 @@ def salvar_dados(grupo_id: str, itens):
 
 def links_conhecidos(itens):
     return {item["link"] for item in itens}
+
+
+def mes_da_data(iso: str) -> str:
+    return datetime.fromisoformat(iso).strftime("%Y-%m")
+
+
+def caminho_arquivo_mes(grupo_id: str, mes: str) -> Path:
+    return DATA_DIR / grupo_id / f"{mes}.json"
+
+
+def carregar_arquivo_mes(grupo_id: str, mes: str):
+    caminho = caminho_arquivo_mes(grupo_id, mes)
+    if not caminho.exists():
+        return []
+    with open(caminho, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def salvar_arquivo_mes(grupo_id: str, mes: str, itens):
+    caminho = caminho_arquivo_mes(grupo_id, mes)
+    caminho.parent.mkdir(parents=True, exist_ok=True)
+    with open(caminho, "w", encoding="utf-8") as f:
+        json.dump(itens, f, ensure_ascii=False, indent=2)
+        f.write("\n")
+
+
+def arquivar_antigos(grupo_id: str, itens, grupo_cfg):
+    """Separa os itens com DIAS_PARA_ARQUIVAR+ dias no feed (contados da captura)
+    e os move para data/<grupo>/<AAAA-MM>.json, agrupados pelo mês de publicação.
+    Retorna só os itens que continuam no feed atual."""
+    atuais = []
+    novos_por_mes = {}
+
+    for item in itens:
+        dias_no_feed = (datetime.now(timezone.utc) - datetime.fromisoformat(item["data_captura"])).days
+        if dias_no_feed >= DIAS_PARA_ARQUIVAR:
+            mes = mes_da_data(item["data_publicacao"])
+            novos_por_mes.setdefault(mes, []).append(item)
+        else:
+            atuais.append(item)
+
+    meses_tocados = set(grupo_cfg.get("arquivo_meses", []))
+    for mes, itens_novos in novos_por_mes.items():
+        existentes = carregar_arquivo_mes(grupo_id, mes)
+        links_existentes = links_conhecidos(existentes)
+        for item in itens_novos:
+            if item["link"] not in links_existentes:
+                existentes.append(item)
+                links_existentes.add(item["link"])
+        existentes.sort(key=lambda i: i["data_publicacao"], reverse=True)
+        salvar_arquivo_mes(grupo_id, mes, existentes)
+        meses_tocados.add(mes)
+
+    grupo_cfg["arquivo_meses"] = sorted(meses_tocados)
+    return atuais
 
 
 # ---------------------------------------------------------------------------
@@ -299,6 +355,7 @@ def processar_grupo(grupo_id, grupo_cfg):
                 site["motivo_alerta"] = f"Sem novidades há {dias} dias" if site["alerta"] else None
         print(f"  -> {len(novos)} notícia(s) nova(s)")
 
+    itens = arquivar_antigos(grupo_id, itens, grupo_cfg)
     salvar_dados(grupo_id, itens)
 
 
