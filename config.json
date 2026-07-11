@@ -42,6 +42,16 @@
           "url_base": "https://ispn.org.br",
           "ultima_novidade": "2026-07-11T18:58:07.579958+00:00",
           "alerta": false
+        },
+        {
+          "id": "sumauma",
+          "nome": "Sumaúma",
+          "modo": "rss",
+          "url_feed": "https://sumauma.com",
+          "url_sitemap": "",
+          "url_base": "",
+          "ultima_novidade": null,
+          "alerta": false
         }
       ]
     }
