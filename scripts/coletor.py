@@ -174,6 +174,13 @@ def extrair_thumbnail_rss(entrada) -> str:
 def coletar_rss(site, ja_conhecidos):
     novos = []
     feed = feedparser.parse(site["url_feed"])
+
+    if feed.bozo and not feed.entries:
+        raise ValueError(
+            f"a URL não parece ser um feed RSS/Atom válido "
+            f"({site.get('url_feed')}) — confira se falta um caminho tipo /feed/ no final"
+        )
+
     for entrada in feed.entries:
         link = entrada.get("link", "").strip()
         if not link or link in ja_conhecidos:
@@ -252,6 +259,7 @@ def processar_grupo(grupo_id, grupo_cfg):
         modo = site.get("modo")
         print(f"[{grupo_id}] {site['nome']} (modo={modo})")
 
+        houve_erro = False
         try:
             if modo == "rss":
                 novos = coletar_rss(site, ja_conhecidos)
@@ -262,6 +270,7 @@ def processar_grupo(grupo_id, grupo_cfg):
         except Exception as erro:  # noqa: BLE001
             print(f"  [erro] {site['nome']}: {erro}", file=sys.stderr)
             novos = []
+            houve_erro = True
 
         for novo in novos:
             novo["id"] = gerar_id(novo["link"])
@@ -272,7 +281,9 @@ def processar_grupo(grupo_id, grupo_cfg):
             itens.append(novo)
             ja_conhecidos.add(novo["link"])
 
-        if novos:
+        if houve_erro:
+            site["alerta"] = True  # erro real: não espera os 30 dias pra avisar
+        elif novos:
             houve_novidade_em.add(site["id"])
             site["ultima_novidade"] = agora_iso()
             site["alerta"] = False
