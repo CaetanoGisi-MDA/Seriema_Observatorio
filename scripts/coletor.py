@@ -114,15 +114,15 @@ def salvar_arquivo_mes(grupo_id: str, mes: str, itens):
 
 
 def arquivar_antigos(grupo_id: str, itens, grupo_cfg):
-    """Separa os itens com DIAS_PARA_ARQUIVAR+ dias no feed (contados da captura)
-    e os move para data/<grupo>/<AAAA-MM>.json, agrupados pelo mês de publicação.
+    """Separa os itens com DIAS_PARA_ARQUIVAR+ dias desde a publicação e os move
+    para data/<grupo>/<AAAA-MM>.json, agrupados pelo mês de publicação.
     Retorna só os itens que continuam no feed atual."""
     atuais = []
     novos_por_mes = {}
 
     for item in itens:
-        dias_no_feed = (datetime.now(timezone.utc) - datetime.fromisoformat(item["data_captura"])).days
-        if dias_no_feed >= DIAS_PARA_ARQUIVAR:
+        dias_desde_publicacao = (datetime.now(timezone.utc) - datetime.fromisoformat(item["data_publicacao"])).days
+        if dias_desde_publicacao >= DIAS_PARA_ARQUIVAR:
             mes = mes_da_data(item["data_publicacao"])
             novos_por_mes.setdefault(mes, []).append(item)
         else:
