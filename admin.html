@@ -67,6 +67,13 @@
     <div id="statusAcesso" class="status"></div>
   </section>
 
+  <section id="secAtualizar">
+    <h2>Atualização manual</h2>
+    <p class="ajuda">Dispara agora a mesma coleta que roda sozinha às 03h — útil se você não quiser esperar o próximo ciclo automático. Percorre todos os grupos e sites em modo <code>rss</code>/<code>sitemap</code>.</p>
+    <button class="btn-principal" onclick="atualizarAgora()">Buscar novidades agora</button>
+    <div id="statusAtualizar" class="status"></div>
+  </section>
+
   <section id="secGrupos">
     <h2>Grupos e sites</h2>
     <p class="ajuda">
@@ -184,11 +191,13 @@ function salvarAcesso(){
 async function testarAcesso(){
   mostrarStatus('statusAcesso', 'carregando', 'Testando…');
   try{
-    const { repo, token } = acesso();
+    const repo = document.getElementById('campoRepo').value.trim();
+    const token = document.getElementById('campoToken').value.trim();
+    if(!repo || !token) throw new Error('Preencha repositório e token antes de testar.');
     const resp = await fetch(`https://api.github.com/repos/${repo}`, {
       headers: { 'Authorization': `token ${token}` }
     });
-    if(!resp.ok) throw new Error(`status ${resp.status}`);
+    if(!resp.ok) throw new Error(`status ${resp.status} — confira o nome do repositório (formato usuário/repo) e se o token tem escopo "repo"`);
     mostrarStatus('statusAcesso', 'ok', 'Conexão OK.');
   }catch(e){
     mostrarStatus('statusAcesso', 'erro', `Falhou: ${e.message}`);
@@ -303,6 +312,20 @@ async function adicionarGrupo(){
     renderizarGrupos();
   }catch(e){
     mostrarStatus('statusGrupos', 'erro', e.message);
+  }
+}
+
+// ---------- atualização manual completa ----------
+async function atualizarAgora(){
+  try{
+    mostrarStatus('statusAtualizar', 'carregando', 'Disparando a coleta…');
+    await chamarGitHub('/actions/workflows/coletar.yml/dispatches', {
+      method: 'POST',
+      body: JSON.stringify({ ref: 'main', inputs: {} }),
+    });
+    mostrarStatus('statusAtualizar', 'ok', 'Disparado. Acompanhe em Actions no GitHub — leva de 1 a 3 minutos.');
+  }catch(e){
+    mostrarStatus('statusAtualizar', 'erro', e.message);
   }
 }
 
