@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clarim — Observatório</title>
+<title>Observatório Seriema</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -125,11 +125,11 @@
   <aside class="sidebar">
     <div class="marca">
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3 14L14 10.5V4L21 8.5V13.5L14 12.5V18L9 20V15.3L3 16.5V14Z" stroke="#B8842E" stroke-width="1.4" stroke-linejoin="round"/>
+        <path d="M14 3L21 4.5L15.5 6L16 11L18 13L15.5 14L14.5 23L11.5 21L13 13L9.5 11Z" stroke="#B8842E" stroke-width="1.4" stroke-linejoin="round"/>
       </svg>
       <div>
-        <div class="marca-texto">Clarim</div>
         <div class="marca-sub">Observatório</div>
+        <div class="marca-texto">Seriema</div>
       </div>
     </div>
 
@@ -155,7 +155,7 @@
 
 <script>
 const ICONE_NOVO = `<svg class="novo-icone" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" title="Publicado nas últimas 24h">
-  <path d="M3 14L14 10.5V4L21 8.5V13.5L14 12.5V18L9 20V15.3L3 16.5V14Z" fill="currentColor"/>
+  <path d="M14 3L21 4.5L15.5 6L16 11L18 13L15.5 14L14.5 23L11.5 21L13 13L9.5 11Z" fill="currentColor"/>
 </svg>`;
 
 let config = null;
@@ -353,9 +353,6 @@ function montarListaFontes(idsGrupos){
       </div>`;
     });
   });
-  if(!gerenciar){
-    html += `<a class="link-config" href="admin.html">Configure o acesso para gerenciar grupos e sites →</a>`;
-  }
   container.innerHTML = html;
 }
 
