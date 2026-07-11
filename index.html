@@ -281,7 +281,7 @@ function montarListaFontes(idsGrupos){
     }
     grupo.sites.forEach(site => {
       const alerta = site.alerta;
-      const tip = alerta ? ` data-tip="Sem novidades há 30+ dias — este site pode estar quebrado e precisar de revisão."` : '';
+      const tip = alerta ? ` data-tip="${site.motivo_alerta || 'Sem novidades há 30+ dias — este site pode estar quebrado e precisar de revisão.'}"` : '';
       html += `<div class="fonte-item"${tip}>
         <span class="ponto ${alerta ? 'alerta' : ''}"></span>${site.nome}
         ${gerenciar ? `<button class="btn-remover-site" title="Remover site" onclick="removerSite('${id}','${site.id}')">×</button>` : ''}
