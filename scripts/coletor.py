@@ -173,7 +173,7 @@ def extrair_thumbnail_rss(entrada) -> str:
 
 def coletar_rss(site, ja_conhecidos):
     novos = []
-    feed = feedparser.parse(site["url_feed"])
+    feed = feedparser.parse(site["url_feed"], request_headers=HEADERS)
 
     if feed.bozo and not feed.entries:
         raise ValueError(
