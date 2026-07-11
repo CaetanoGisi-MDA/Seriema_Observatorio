@@ -1,0 +1,55 @@
+name: Coletar notícias
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+    inputs:
+      grupo:
+        description: "ID do grupo (obrigatório apenas para adição manual)"
+        required: false
+        type: string
+      url:
+        description: "URL da notícia (obrigatório apenas para adição manual)"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências
+        run: pip install -r scripts/requirements.txt
+
+      - name: Rodar coleta (diária ou manual)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          if [ -n "${{ inputs.url }}" ]; then
+            python scripts/coletor.py --grupo "${{ inputs.grupo }}" --url "${{ inputs.url }}"
+          else
+            python scripts/coletor.py
+          fi
+
+      - name: Commit e push se houve mudanças
+        run: |
+          git config user.name "clarim-bot"
+          git config user.email "clarim-bot@users.noreply.github.com"
+          git add config.json data/
+          if ! git diff --cached --quiet; then
+            git commit -m "Atualização automática de notícias $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          else
+            echo "Nada novo para commitar."
+          fi
