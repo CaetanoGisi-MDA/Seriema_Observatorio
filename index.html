@@ -78,12 +78,18 @@
   .cabecalho{margin-bottom:24px;}
   .cabecalho h1{font-family:'Fraunces',serif;font-size:26px;margin:0 0 4px;font-weight:600;}
   .cabecalho p{margin:0;color:var(--ink-muted);font-size:14px;}
+  .linha-filtros{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;}
   .campo-busca{
-    margin-top:14px;width:100%;max-width:360px;padding:9px 12px;border:1px solid var(--rule);
+    flex:1;min-width:200px;max-width:360px;padding:9px 12px;border:1px solid var(--rule);
     border-radius:8px;font-family:'Inter';font-size:14px;background:var(--paper-raised);color:var(--ink);
   }
   .campo-busca:focus{outline:2px solid var(--brass);outline-offset:0;}
   .campo-busca::placeholder{color:var(--ink-muted);}
+  .seletor-mes{
+    padding:9px 10px;border:1px solid var(--rule);border-radius:8px;font-family:'Inter';
+    font-size:13.5px;background:var(--paper-raised);color:var(--ink);
+  }
+  .seletor-mes:focus{outline:2px solid var(--brass);outline-offset:0;}
 
   .vazio{background:var(--paper-raised);border:1px dashed var(--rule);border-radius:10px;padding:36px 24px;text-align:center;color:var(--ink-muted);}
   .vazio strong{display:block;font-family:'Fraunces',serif;font-size:17px;color:var(--ink);margin-bottom:6px;font-weight:600;}
@@ -138,7 +144,10 @@
     <div class="cabecalho">
       <h1 id="tituloFeed">Todas as notícias</h1>
       <p id="subtituloFeed">carregando…</p>
-      <input id="campoBusca" class="campo-busca" type="search" placeholder="Buscar por título, resumo ou fonte…">
+      <div class="linha-filtros">
+        <input id="campoBusca" class="campo-busca" type="search" placeholder="Buscar por título, resumo ou fonte…">
+        <select id="seletorMes" class="seletor-mes"><option value="todos">Todos os meses</option></select>
+      </div>
     </div>
     <div id="conteudo"></div>
   </main>
@@ -154,6 +163,8 @@ let itensPorGrupo = {};
 let grupoAtivo = 'todos';
 let shaConfig = null;
 let termoBusca = '';
+let mesAtivo = 'todos';
+let arquivoCache = {}; // chave `${grupoId}:${mes}` -> array de itens já carregados
 
 function acesso(){
   return {
@@ -236,6 +247,60 @@ async function carregar(){
 
   montarNavGrupos(idsGrupos);
   montarListaFontes(idsGrupos);
+  montarSeletorMes(idsGrupos);
+  renderizarFeed();
+}
+
+function nomeMes(mes){
+  const NOMES = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+  const [ano, m] = mes.split('-');
+  return `${NOMES[parseInt(m,10)-1]} de ${ano}`;
+}
+
+function montarSeletorMes(idsGrupos){
+  const select = document.getElementById('seletorMes');
+  const meses = new Set();
+  idsGrupos.forEach(id => (config.grupos[id].arquivo_meses || []).forEach(m => meses.add(m)));
+  const mesesOrdenados = [...meses].sort().reverse();
+
+  select.innerHTML = '<option value="todos">Todos os meses</option>' +
+    mesesOrdenados.map(m => `<option value="${m}">${nomeMes(m)}</option>`).join('');
+
+  select.addEventListener('change', () => {
+    mesAtivo = select.value;
+    atualizarComFiltros();
+  });
+}
+
+async function garantirDadosCarregados(){
+  const precisaDeArquivo = termoBusca.trim() !== '' || mesAtivo !== 'todos';
+  if(!precisaDeArquivo) return;
+
+  const idsGrupos = grupoAtivo === 'todos' ? Object.keys(config.grupos) : [grupoAtivo];
+  const buscas = [];
+
+  idsGrupos.forEach(id => {
+    const meses = mesAtivo === 'todos' ? (config.grupos[id].arquivo_meses || []) : [mesAtivo];
+    meses.forEach(mes => {
+      const chave = `${id}:${mes}`;
+      if(arquivoCache[chave]) return;
+      buscas.push(
+        fetch(`data/${id}/${mes}.json`)
+          .then(r => r.ok ? r.json() : [])
+          .then(itens => { arquivoCache[chave] = itens; })
+          .catch(() => { arquivoCache[chave] = []; })
+      );
+    });
+  });
+
+  if(buscas.length){
+    document.getElementById('subtituloFeed').textContent = 'carregando arquivo…';
+    await Promise.all(buscas);
+  }
+}
+
+async function atualizarComFiltros(){
+  await garantirDadosCarregados();
   renderizarFeed();
 }
 
@@ -258,7 +323,7 @@ function montarNavGrupos(idsGrupos){
       grupoAtivo = btn.dataset.grupo;
       nav.querySelectorAll('button[data-grupo]').forEach(b => b.classList.remove('ativo'));
       btn.classList.add('ativo');
-      renderizarFeed();
+      atualizarComFiltros();
     });
   });
 }
@@ -364,7 +429,19 @@ function renderizarFeed(){
   let itens = [];
   idsGrupos.forEach(id => {
     itens = itens.concat(itensPorGrupo[id].map(i => ({...i, _grupoNome: config.grupos[id].nome})));
+    if(termoBusca.trim() !== '' || mesAtivo !== 'todos'){
+      const meses = mesAtivo === 'todos' ? (config.grupos[id].arquivo_meses || []) : [mesAtivo];
+      meses.forEach(mes => {
+        const doArquivo = arquivoCache[`${id}:${mes}`] || [];
+        itens = itens.concat(doArquivo.map(i => ({...i, _grupoNome: config.grupos[id].nome})));
+      });
+    }
   });
+
+  if(mesAtivo !== 'todos'){
+    itens = itens.filter(item => item.data_publicacao.slice(0,7) === mesAtivo);
+  }
+
   itens.sort((a,b) => new Date(b.data_publicacao) - new Date(a.data_publicacao));
 
   const totalAntesDaBusca = itens.length;
@@ -378,15 +455,16 @@ function renderizarFeed(){
   }
 
   document.getElementById('tituloFeed').textContent = grupoAtivo === 'todos' ? 'Todas as notícias' : config.grupos[grupoAtivo].nome;
+  const sufixoMes = mesAtivo !== 'todos' ? ` — ${nomeMes(mesAtivo)}` : '';
   document.getElementById('subtituloFeed').textContent = termoBusca.trim()
-    ? `${itens.length} de ${totalAntesDaBusca} notícia${totalAntesDaBusca===1?'':'s'} — busca: "${termoBusca.trim()}"`
-    : `${itens.length} notícia${itens.length===1?'':'s'} no feed`;
+    ? `${itens.length} de ${totalAntesDaBusca} notícia${totalAntesDaBusca===1?'':'s'} — busca: "${termoBusca.trim()}"${sufixoMes}`
+    : `${itens.length} notícia${itens.length===1?'':'s'} no feed${sufixoMes}`;
 
   const conteudo = document.getElementById('conteudo');
 
   if(itens.length === 0){
     conteudo.innerHTML = termoBusca.trim()
-      ? `<div class="vazio"><strong>Nada encontrado</strong>Nenhuma notícia bate com "${termoBusca.trim()}" neste grupo. Tenta outro termo ou limpa a busca.</div>`
+      ? `<div class="vazio"><strong>Nada encontrado</strong>Nenhuma notícia bate com "${termoBusca.trim()}"${sufixoMes ? ' em ' + nomeMes(mesAtivo) : ''} neste grupo. Tenta outro termo ou limpa a busca.</div>`
       : `<div class="vazio"><strong>Nenhuma notícia ainda</strong>A coleta roda todo dia às 03:00 (horário de Brasília). Assim que houver novidade nos sites cadastrados, ela aparece aqui.</div>`;
     return;
   }
@@ -462,7 +540,7 @@ carregar();
 
 document.getElementById('campoBusca').addEventListener('input', (e) => {
   termoBusca = e.target.value;
-  renderizarFeed();
+  atualizarComFiltros();
 });
 
 </script>
