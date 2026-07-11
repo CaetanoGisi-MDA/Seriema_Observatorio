@@ -47,7 +47,7 @@
           "id": "sumauma",
           "nome": "Sumaúma",
           "modo": "rss",
-          "url_feed": "https://sumauma.com",
+          "url_feed": "https://sumauma.com/feed/",
           "url_sitemap": "",
           "url_base": "",
           "ultima_novidade": null,
