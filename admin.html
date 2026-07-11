@@ -3,157 +3,132 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clarim — Observatório</title>
+<title>Clarim — Administração</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#EEF0EF;
-    --paper-raised:#F8F9F8;
-    --ink:#171A1C;
-    --ink-muted:#666B6F;
-    --rule:#D9DCDA;
-    --brass:#B8842E;
-    --patina:#3A6B63;
-    --sidebar:#14181B;
-    --sidebar-text:#C7CCCE;
-    --sidebar-text-dim:#7A8285;
+    --paper:#EEF0EF; --paper-raised:#F8F9F8; --ink:#171A1C; --ink-muted:#666B6F;
+    --rule:#D9DCDA; --brass:#B8842E; --patina:#3A6B63; --erro:#B23A3A;
   }
   *{box-sizing:border-box;}
   body{margin:0;font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);}
-  a{color:inherit;}
+  .wrap{max-width:680px;margin:0 auto;padding:32px 20px 80px;}
+  a.voltar{font-family:'IBM Plex Mono';font-size:12px;color:var(--ink-muted);text-decoration:none;}
+  h1{font-family:'Fraunces',serif;font-size:24px;font-weight:700;margin:14px 0 6px;}
+  h2{font-family:'Fraunces',serif;font-size:17px;font-weight:600;margin:0 0 4px;}
+  .lead{color:var(--ink-muted);font-size:14px;margin:0 0 26px;}
 
-  .layout{display:grid;grid-template-columns:240px 1fr;min-height:100vh;}
-  @media (max-width:760px){.layout{grid-template-columns:1fr;} .sidebar{position:sticky;top:0;z-index:5;}}
+  section{background:var(--paper-raised);border:1px solid var(--rule);border-radius:12px;padding:20px 20px 22px;margin-bottom:18px;}
+  .ajuda{font-size:13px;color:var(--ink-muted);line-height:1.55;margin:4px 0 16px;}
 
-  /* ---------- sidebar ---------- */
-  .sidebar{background:var(--sidebar);color:var(--sidebar-text);padding:28px 18px;}
-  .marca{display:flex;align-items:center;gap:10px;margin-bottom:28px;}
-  .marca svg{width:22px;height:22px;flex-shrink:0;}
-  .marca-texto{font-family:'Fraunces',serif;font-weight:600;font-size:19px;color:#fff;letter-spacing:.2px;}
-  .marca-sub{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--sidebar-text-dim);text-transform:uppercase;letter-spacing:1px;margin-top:2px;}
+  label{display:block;font-size:12.5px;font-weight:600;margin:12px 0 5px;}
+  input,select{width:100%;padding:9px 10px;border:1px solid var(--rule);border-radius:7px;font-family:'Inter';font-size:14px;background:#fff;}
+  input:focus,select:focus{outline:2px solid var(--brass);outline-offset:0;}
 
-  .grupo-nav{list-style:none;margin:0 0 22px;padding:0;}
-  .grupo-nav button{
-    width:100%;text-align:left;background:none;border:none;color:var(--sidebar-text);
-    font-family:'Inter';font-size:14.5px;font-weight:500;padding:9px 10px;border-radius:6px;
-    cursor:pointer;display:flex;justify-content:space-between;align-items:center;
-  }
-  .grupo-nav button:hover{background:rgba(255,255,255,.06);}
-  .grupo-nav button.ativo{background:rgba(184,132,46,.16);color:#fff;}
-  .grupo-nav .contagem{font-family:'IBM Plex Mono';font-size:11px;color:var(--sidebar-text-dim);}
+  button{cursor:pointer;font-family:'Inter';font-weight:600;font-size:13.5px;border-radius:7px;border:none;padding:9px 16px;margin-top:14px;}
+  .btn-principal{background:var(--ink);color:#fff;}
+  .btn-secundario{background:#fff;border:1px solid var(--rule);color:var(--ink);}
+  .btn-perigo{background:#fff;border:1px solid var(--erro);color:var(--erro);padding:4px 9px;font-size:12px;margin:0;}
 
-  .fontes-titulo{font-family:'IBM Plex Mono';font-size:10.5px;text-transform:uppercase;letter-spacing:1px;color:var(--sidebar-text-dim);margin:0 0 10px;padding:0 10px;}
-  .fontes-titulo-linha{display:flex;justify-content:space-between;align-items:center;padding:0 10px;margin:14px 0 8px;}
-  .fontes-titulo-linha .fontes-titulo{margin:0;padding:0;}
-  .mini-acoes{display:flex;gap:6px;}
-  .mini-acoes button{background:none;border:none;color:var(--sidebar-text-dim);font-family:'IBM Plex Mono';font-size:10px;cursor:pointer;padding:0;text-decoration:underline;text-underline-offset:2px;}
-  .mini-acoes button:hover{color:var(--brass);}
-  .ajuda-vazia{padding:0 10px;font-size:12px;color:var(--sidebar-text-dim);margin:0 0 8px;}
-  .acao-gerenciar{color:var(--brass) !important;font-family:'IBM Plex Mono';font-size:12px !important;}
-  .btn-remover-site{background:none;border:none;color:var(--sidebar-text-dim);cursor:pointer;font-size:14px;margin-left:auto;padding:0 2px;line-height:1;}
-  .btn-remover-site:hover{color:#D9534F;}
-  .link-config{display:block;padding:10px 10px 0;font-family:'IBM Plex Mono';font-size:11px;color:var(--brass);text-decoration:none;line-height:1.5;}
-  .link-config:hover{text-decoration:underline;}
-  .fonte-item{display:flex;align-items:center;gap:8px;padding:5px 10px;font-size:13px;color:var(--sidebar-text-dim);}
-  .ponto{width:6px;height:6px;border-radius:50%;background:var(--patina);flex-shrink:0;}
-  .ponto.alerta{background:var(--brass);}
-  .fonte-item[data-tip]{position:relative;cursor:default;}
-  .fonte-item[data-tip]:hover::after{
-    content:attr(data-tip);position:absolute;left:0;top:100%;margin-top:4px;
-    background:#000;color:#fff;padding:6px 9px;border-radius:5px;font-size:11.5px;
-    width:200px;z-index:10;line-height:1.4;font-family:'Inter';
-  }
+  .status{font-family:'IBM Plex Mono';font-size:12px;margin-top:10px;padding:8px 10px;border-radius:6px;display:none;}
+  .status.ok{display:block;background:rgba(58,107,99,.12);color:var(--patina);}
+  .status.erro{display:block;background:rgba(178,58,58,.1);color:var(--erro);}
+  .status.carregando{display:block;background:rgba(0,0,0,.05);color:var(--ink-muted);}
 
-  .link-admin{
-    display:block;margin-top:24px;padding-top:14px;border-top:1px solid rgba(255,255,255,.1);
-    font-family:'IBM Plex Mono';font-size:11.5px;color:var(--sidebar-text-dim);
-    text-decoration:none;letter-spacing:.3px;
-  }
-  .link-admin:hover{color:#fff;}
+  .site-card{border:1px solid var(--rule);border-radius:8px;padding:10px 12px;margin-top:8px;display:flex;justify-content:space-between;align-items:center;gap:10px;}
+  .site-card .nome{font-weight:600;font-size:13.5px;}
+  .site-card .detalhe{font-family:'IBM Plex Mono';font-size:11px;color:var(--ink-muted);margin-top:2px;word-break:break-all;}
+  .grupo-bloco{margin-top:16px;}
+  .grupo-bloco h3{font-size:14px;margin:0 0 4px;font-family:'Inter';font-weight:600;}
 
-  /* ---------- main ---------- */
-  main{padding:32px clamp(16px,4vw,56px);max-width:820px;}
-  .cabecalho{margin-bottom:24px;}
-  .cabecalho h1{font-family:'Fraunces',serif;font-size:26px;margin:0 0 4px;font-weight:600;}
-  .cabecalho p{margin:0;color:var(--ink-muted);font-size:14px;}
-  .campo-busca{
-    margin-top:14px;width:100%;max-width:360px;padding:9px 12px;border:1px solid var(--rule);
-    border-radius:8px;font-family:'Inter';font-size:14px;background:var(--paper-raised);color:var(--ink);
-  }
-  .campo-busca:focus{outline:2px solid var(--brass);outline-offset:0;}
-  .campo-busca::placeholder{color:var(--ink-muted);}
-
-  .vazio{background:var(--paper-raised);border:1px dashed var(--rule);border-radius:10px;padding:36px 24px;text-align:center;color:var(--ink-muted);}
-  .vazio strong{display:block;font-family:'Fraunces',serif;font-size:17px;color:var(--ink);margin-bottom:6px;font-weight:600;}
-
-  ul.feed{list-style:none;margin:0;padding:0;}
-  li.separador-dia{
-    font-family:'IBM Plex Mono';font-size:11.5px;text-transform:uppercase;letter-spacing:.6px;
-    color:var(--ink-muted);padding:20px 2px 7px;border-bottom:1px solid var(--rule);margin-bottom:10px;
-  }
-  li.separador-dia:first-child{padding-top:0;}
-  li.item{background:var(--paper-raised);border:1px solid var(--rule);border-radius:10px;margin-bottom:10px;overflow:hidden;}
-  .linha{display:flex;gap:14px;padding:13px 14px;cursor:pointer;align-items:flex-start;}
-  .linha:hover{background:#F1F3F1;}
-  .thumb{width:64px;height:64px;border-radius:7px;object-fit:cover;flex-shrink:0;background:var(--rule);}
-  .thumb.sem-imagem{display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:20px;color:var(--ink-muted);}
-  .info{min-width:0;flex:1;}
-  .titulo-linha{display:flex;align-items:center;gap:7px;}
-  .titulo{font-family:'Fraunces',serif;font-size:16px;font-weight:600;line-height:1.32;margin:0;}
-  .novo-icone{flex-shrink:0;width:13px;height:13px;color:var(--brass);}
-  .meta{margin-top:5px;font-family:'IBM Plex Mono';font-size:11px;color:var(--ink-muted);display:flex;gap:10px;flex-wrap:wrap;}
-  .meta .grupo-tag{color:var(--patina);}
-
-  .detalhe{max-height:0;overflow:hidden;transition:max-height .25s ease;border-top:1px solid transparent;}
-  li.item.aberto .detalhe{max-height:600px;border-top:1px solid var(--rule);}
-  .detalhe-inner{padding:14px 16px 18px;font-size:14.5px;line-height:1.62;color:#31363A;}
-  .detalhe-inner p{margin:0 0 12px;}
-  .ler-original{display:inline-flex;align-items:center;gap:5px;font-family:'Inter';font-weight:600;font-size:13.5px;color:var(--brass);text-decoration:none;}
-  .ler-original:hover{text-decoration:underline;}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  @media (max-width:520px){.grid2{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
-<div class="layout">
-  <aside class="sidebar">
-    <div class="marca">
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3 14L14 10.5V4L21 8.5V13.5L14 12.5V18L9 20V15.3L3 16.5V14Z" stroke="#B8842E" stroke-width="1.4" stroke-linejoin="round"/>
-      </svg>
-      <div>
-        <div class="marca-texto">Clarim</div>
-        <div class="marca-sub">Observatório</div>
+<div class="wrap">
+  <a class="voltar" href="index.html">← voltar para o feed</a>
+  <h1>Administração do Clarim</h1>
+  <p class="lead">Configuração de acesso, grupos/sites monitorados e adição manual de notícias.</p>
+
+  <section id="secAcesso">
+    <h2>Acesso ao repositório</h2>
+    <p class="ajuda">O token fica salvo apenas neste navegador (localStorage) e é usado só para editar o <code>config.json</code> e disparar a coleta manual — a leitura do feed não precisa dele.</p>
+    <label>Seu nome</label>
+    <input id="campoNome" placeholder="Como te chamar aqui">
+    <label>Repositório (usuário/repo)</label>
+    <input id="campoRepo" placeholder="caetanogisi-mda/Observatorio_Clarim">
+    <label>Token classic do GitHub</label>
+    <input id="campoToken" type="password" placeholder="ghp_...">
+    <button class="btn-principal" onclick="salvarAcesso()">Salvar</button>
+    <button class="btn-secundario" onclick="testarAcesso()">Testar conexão</button>
+    <div id="statusAcesso" class="status"></div>
+  </section>
+
+  <section id="secAtualizar">
+    <h2>Atualização manual</h2>
+    <p class="ajuda">Dispara agora a mesma coleta que roda sozinha às 03h — útil se você não quiser esperar o próximo ciclo automático. Percorre todos os grupos e sites em modo <code>rss</code>/<code>sitemap</code>.</p>
+    <button class="btn-principal" onclick="atualizarAgora()">Buscar novidades agora</button>
+    <div id="statusAtualizar" class="status"></div>
+  </section>
+
+  <section id="secGrupos">
+    <h2>Grupos e sites</h2>
+    <p class="ajuda">
+      <strong>rss</strong> — o site tem feed RSS/Atom; roda sozinho todo dia.<br>
+      <strong>sitemap</strong> — sem RSS, mas o site tem <code>sitemap.xml</code>; roda sozinho, um pouco menos preciso.<br>
+      <strong>manual</strong> — sem RSS nem sitemap; cada notícia precisa ser adicionada por você aqui embaixo, colando o link.
+    </p>
+    <div id="listaGrupos"></div>
+
+    <div class="grupo-bloco">
+      <h3>Adicionar site</h3>
+      <div class="grid2">
+        <div><label>Grupo</label><select id="novoSiteGrupo"></select></div>
+        <div><label>Modo</label>
+          <select id="novoSiteModo" onchange="atualizarCampoUrl()">
+            <option value="rss">rss</option>
+            <option value="sitemap">sitemap</option>
+            <option value="manual">manual</option>
+          </select>
+        </div>
       </div>
+      <label>Nome do site</label>
+      <input id="novoSiteNome" placeholder="Ex: Agência Pública">
+      <label id="labelNovoSiteUrl">URL do feed RSS</label>
+      <input id="novoSiteUrl" placeholder="https://...">
+      <button class="btn-secundario" onclick="adicionarSite()">Adicionar site</button>
     </div>
 
-    <ul class="grupo-nav" id="navGrupos"></ul>
-
-    <div id="listaFontes"></div>
-
-    <a href="admin.html" class="link-admin">⚙ Administração</a>
-  </aside>
-
-  <main>
-    <div class="cabecalho">
-      <h1 id="tituloFeed">Todas as notícias</h1>
-      <p id="subtituloFeed">carregando…</p>
-      <input id="campoBusca" class="campo-busca" type="search" placeholder="Buscar por título, resumo ou fonte…">
+    <div class="grupo-bloco">
+      <h3>Adicionar grupo</h3>
+      <div class="grid2">
+        <div><label>ID (sem espaço/acento)</label><input id="novoGrupoId" placeholder="cultura"></div>
+        <div><label>Nome</label><input id="novoGrupoNome" placeholder="Cultura"></div>
+      </div>
+      <button class="btn-secundario" onclick="adicionarGrupo()">Adicionar grupo</button>
     </div>
-    <div id="conteudo"></div>
-  </main>
+
+    <div id="statusGrupos" class="status"></div>
+  </section>
+
+  <section id="secManual">
+    <h2>Adicionar notícia manual</h2>
+    <p class="ajuda">Use apenas para sites em modo <strong>manual</strong>. O app busca título, imagem e resumo automaticamente a partir do link — mas isso só cobre essa notícia específica; quando sair uma nova nesse site, volte aqui e cole o link de novo.</p>
+    <label>Grupo</label>
+    <select id="manualGrupo"></select>
+    <label>Link da notícia</label>
+    <input id="manualUrl" placeholder="https://site.com/materia">
+    <button class="btn-principal" onclick="adicionarManual()">Buscar e adicionar</button>
+    <div id="statusManual" class="status"></div>
+  </section>
 </div>
 
 <script>
-const ICONE_NOVO = `<svg class="novo-icone" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" title="Publicado nas últimas 24h">
-  <path d="M3 14L14 10.5V4L21 8.5V13.5L14 12.5V18L9 20V15.3L3 16.5V14Z" fill="currentColor"/>
-</svg>`;
-
 let config = null;
-let itensPorGrupo = {};
-let grupoAtivo = 'todos';
 let shaConfig = null;
-let termoBusca = '';
 
 function acesso(){
   return {
@@ -161,10 +136,7 @@ function acesso(){
     token: localStorage.getItem('clarim_token') || '',
   };
 }
-function temAcesso(){
-  const { repo, token } = acesso();
-  return !!(repo && token);
-}
+
 function paraBase64(str){
   const bytes = new TextEncoder().encode(str);
   let binario = '';
@@ -176,8 +148,10 @@ function deBase64(b64){
   const bytes = Uint8Array.from(binario, c => c.charCodeAt(0));
   return new TextDecoder('utf-8').decode(bytes);
 }
+
 async function chamarGitHub(caminho, opcoes = {}){
   const { repo, token } = acesso();
+  if(!repo || !token) throw new Error('Configure repositório e token primeiro.');
   const resp = await fetch(`https://api.github.com/repos/${repo}${caminho}`, {
     ...opcoes,
     headers: {
@@ -192,6 +166,85 @@ async function chamarGitHub(caminho, opcoes = {}){
   }
   return resp.status === 204 ? null : resp.json();
 }
+
+function mostrarStatus(id, tipo, texto){
+  const el = document.getElementById(id);
+  el.className = `status ${tipo}`;
+  el.textContent = texto;
+}
+
+// ---------- acesso ----------
+function carregarCamposAcesso(){
+  document.getElementById('campoNome').value = localStorage.getItem('clarim_nome') || '';
+  document.getElementById('campoRepo').value = localStorage.getItem('clarim_repo') || '';
+  document.getElementById('campoToken').value = localStorage.getItem('clarim_token') || '';
+}
+
+function salvarAcesso(){
+  localStorage.setItem('clarim_nome', document.getElementById('campoNome').value.trim());
+  localStorage.setItem('clarim_repo', document.getElementById('campoRepo').value.trim());
+  localStorage.setItem('clarim_token', document.getElementById('campoToken').value.trim());
+  mostrarStatus('statusAcesso', 'ok', 'Salvo neste navegador.');
+  carregarConfig();
+}
+
+async function testarAcesso(){
+  mostrarStatus('statusAcesso', 'carregando', 'Testando…');
+  try{
+    const repo = document.getElementById('campoRepo').value.trim();
+    const token = document.getElementById('campoToken').value.trim();
+    if(!repo || !token) throw new Error('Preencha repositório e token antes de testar.');
+    const resp = await fetch(`https://api.github.com/repos/${repo}`, {
+      headers: { 'Authorization': `token ${token}` }
+    });
+    if(!resp.ok) throw new Error(`status ${resp.status} — confira o nome do repositório (formato usuário/repo) e se o token tem escopo "repo"`);
+    mostrarStatus('statusAcesso', 'ok', 'Conexão OK.');
+  }catch(e){
+    mostrarStatus('statusAcesso', 'erro', `Falhou: ${e.message}`);
+  }
+}
+
+// ---------- grupos/sites ----------
+async function carregarConfig(){
+  const { repo, token } = acesso();
+  if(!repo || !token) return;
+  try{
+    const dados = await chamarGitHub('/contents/config.json');
+    shaConfig = dados.sha;
+    config = JSON.parse(deBase64(dados.content));
+    renderizarGrupos();
+  }catch(e){
+    mostrarStatus('statusGrupos', 'erro', `Não consegui carregar config.json: ${e.message}`);
+  }
+}
+
+function renderizarGrupos(){
+  const lista = document.getElementById('listaGrupos');
+  const seletores = [document.getElementById('novoSiteGrupo'), document.getElementById('manualGrupo')];
+  seletores.forEach(s => s.innerHTML = '');
+
+  let html = '';
+  Object.entries(config.grupos).forEach(([id, grupo]) => {
+    seletores.forEach(s => s.innerHTML += `<option value="${id}">${grupo.nome}</option>`);
+    html += `<div class="grupo-bloco"><h3>${grupo.nome} <span style="color:var(--ink-muted);font-weight:400;">(${id})</span></h3>`;
+    if(!grupo.sites.length){
+      html += `<p class="ajuda" style="margin:4px 0;">Nenhum site ainda.</p>`;
+    }
+    grupo.sites.forEach(site => {
+      html += `<div class="site-card">
+        <div>
+          <div class="nome">${site.nome} <span style="color:var(--ink-muted);font-weight:400;">— ${site.modo}</span></div>
+          <div class="detalhe">${site.url_feed || site.url_sitemap || site.url_base || ''}</div>
+        </div>
+        <button class="btn-perigo" onclick="removerSite('${id}','${site.id}')">Remover</button>
+      </div>`;
+    });
+    html += `</div>`;
+  });
+  lista.innerHTML = html;
+  atualizarCampoUrl();
+}
+
 async function salvarConfigNoGitHub(mensagem){
   const conteudo = paraBase64(JSON.stringify(config, null, 2) + '\n');
   const resposta = await chamarGitHub('/contents/config.json', {
@@ -201,270 +254,102 @@ async function salvarConfigNoGitHub(mensagem){
   shaConfig = resposta.content.sha;
 }
 
-function diasDesde(isoDate){
-  const then = new Date(isoDate);
-  const now = new Date();
-  return Math.max(0, Math.floor((now - then) / (1000*60*60*24)));
+function atualizarCampoUrl(){
+  const modo = document.getElementById('novoSiteModo').value;
+  const label = document.getElementById('labelNovoSiteUrl');
+  label.textContent = modo === 'rss' ? 'URL do feed RSS' : modo === 'sitemap' ? 'URL do sitemap.xml' : 'URL do site (não roda sozinho)';
 }
 
-function formatarData(iso){
-  const d = new Date(iso);
-  return d.toLocaleDateString('pt-BR', {day:'2-digit', month:'short', year:'numeric'});
-}
-
-async function carregar(){
-  if(temAcesso()){
-    try{
-      const dados = await chamarGitHub('/contents/config.json');
-      shaConfig = dados.sha;
-      config = JSON.parse(deBase64(dados.content));
-    }catch(e){
-      config = await (await fetch('config.json')).json();
-    }
-  }else{
-    config = await (await fetch('config.json')).json();
-  }
-  const idsGrupos = Object.keys(config.grupos);
-
-  await Promise.all(idsGrupos.map(async id => {
-    try{
-      itensPorGrupo[id] = await (await fetch(`data/${id}.json`)).json();
-    }catch(e){
-      itensPorGrupo[id] = [];
-    }
-  }));
-
-  montarNavGrupos(idsGrupos);
-  montarListaFontes(idsGrupos);
-  renderizarFeed();
-}
-
-function montarNavGrupos(idsGrupos){
-  const nav = document.getElementById('navGrupos');
-  const totalGeral = idsGrupos.reduce((acc,id) => acc + itensPorGrupo[id].length, 0);
-
-  const linhas = [`<li><button data-grupo="todos" class="ativo">Todas<span class="contagem">${totalGeral}</span></button></li>`];
-  idsGrupos.forEach(id => {
-    const nome = config.grupos[id].nome;
-    linhas.push(`<li><button data-grupo="${id}">${nome}<span class="contagem">${itensPorGrupo[id].length}</span></button></li>`);
-  });
-  if(temAcesso()){
-    linhas.push(`<li><button class="acao-gerenciar" onclick="adicionarGrupo()">+ Novo grupo</button></li>`);
-  }
-  nav.innerHTML = linhas.join('');
-
-  nav.querySelectorAll('button[data-grupo]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      grupoAtivo = btn.dataset.grupo;
-      nav.querySelectorAll('button[data-grupo]').forEach(b => b.classList.remove('ativo'));
-      btn.classList.add('ativo');
-      renderizarFeed();
-    });
-  });
-}
-
-function montarListaFontes(idsGrupos){
-  const container = document.getElementById('listaFontes');
-  const gerenciar = temAcesso();
-  let html = '';
-  idsGrupos.forEach(id => {
-    const grupo = config.grupos[id];
-    html += `<div class="fontes-titulo-linha">
-      <span class="fontes-titulo">${grupo.nome}</span>
-      ${gerenciar ? `<span class="mini-acoes">
-        <button title="Adicionar site" onclick="adicionarSite('${id}')">+site</button>
-        <button title="Remover grupo" onclick="removerGrupo('${id}')">remover</button>
-      </span>` : ''}
-    </div>`;
-    if(!grupo.sites.length){
-      html += `<p class="ajuda-vazia">Nenhum site ainda.</p>`;
-    }
-    grupo.sites.forEach(site => {
-      const alerta = site.alerta;
-      const tip = alerta ? ` data-tip="Sem novidades há 30+ dias — este site pode estar quebrado e precisar de revisão."` : '';
-      html += `<div class="fonte-item"${tip}>
-        <span class="ponto ${alerta ? 'alerta' : ''}"></span>${site.nome}
-        ${gerenciar ? `<button class="btn-remover-site" title="Remover site" onclick="removerSite('${id}','${site.id}')">×</button>` : ''}
-      </div>`;
-    });
-  });
-  if(!gerenciar){
-    html += `<a class="link-config" href="admin.html">Configure o acesso para gerenciar grupos e sites →</a>`;
-  }
-  container.innerHTML = html;
-}
-
-async function adicionarGrupo(){
-  const id = prompt('ID do grupo (sem espaço/acento, ex: cultura):');
-  if(!id) return;
-  if(config.grupos[id]){ alert('Já existe um grupo com esse ID.'); return; }
-  const nome = prompt('Nome de exibição do grupo:', id);
-  if(!nome) return;
-  config.grupos[id] = { nome, sites: [] };
+async function adicionarSite(){
   try{
-    await salvarConfigNoGitHub(`Adiciona grupo ${nome}`);
-    itensPorGrupo[id] = [];
-    montarNavGrupos(Object.keys(config.grupos));
-    montarListaFontes(Object.keys(config.grupos));
-  }catch(e){ alert(`Erro ao salvar: ${e.message}`); }
-}
+    const grupoId = document.getElementById('novoSiteGrupo').value;
+    const modo = document.getElementById('novoSiteModo').value;
+    const nome = document.getElementById('novoSiteNome').value.trim();
+    const url = document.getElementById('novoSiteUrl').value.trim();
+    if(!grupoId || !nome || !url) throw new Error('Preencha grupo, nome e URL.');
 
-async function removerGrupo(grupoId){
-  const nome = config.grupos[grupoId].nome;
-  if(!confirm(`Remover o grupo "${nome}" e todos os seus sites da configuração? As notícias já coletadas continuam no arquivo de dados, só não aparecem mais.`)) return;
-  delete config.grupos[grupoId];
-  try{
-    await salvarConfigNoGitHub(`Remove grupo ${nome}`);
-    delete itensPorGrupo[grupoId];
-    if(grupoAtivo === grupoId) grupoAtivo = 'todos';
-    montarNavGrupos(Object.keys(config.grupos));
-    montarListaFontes(Object.keys(config.grupos));
-    renderizarFeed();
-  }catch(e){ alert(`Erro ao salvar: ${e.message}`); }
-}
-
-async function adicionarSite(grupoId){
-  const nome = prompt('Nome do site:');
-  if(!nome) return;
-  const modo = prompt('Modo: digite "rss", "sitemap" ou "manual"', 'rss');
-  if(!modo || !['rss','sitemap','manual'].includes(modo)) { alert('Modo inválido.'); return; }
-  const url = prompt(modo === 'rss' ? 'URL do feed RSS:' : modo === 'sitemap' ? 'URL do sitemap.xml:' : 'URL do site:');
-  if(!url) return;
-
-  const id = nome.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-  config.grupos[grupoId].sites.push({
-    id, nome, modo,
-    url_feed: modo === 'rss' ? url : '',
-    url_sitemap: modo === 'sitemap' ? url : '',
-    url_base: modo === 'manual' ? url : '',
-    ultima_novidade: null,
-    alerta: false,
-  });
-  try{
+    const id = nome.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+    const site = {
+      id, nome, modo,
+      url_feed: modo === 'rss' ? url : '',
+      url_sitemap: modo === 'sitemap' ? url : '',
+      url_base: modo === 'manual' ? url : '',
+      ultima_novidade: null,
+      alerta: false,
+    };
+    config.grupos[grupoId].sites.push(site);
+    mostrarStatus('statusGrupos', 'carregando', 'Salvando…');
     await salvarConfigNoGitHub(`Adiciona site ${nome} em ${grupoId}`);
-    montarListaFontes(Object.keys(config.grupos));
-  }catch(e){ alert(`Erro ao salvar: ${e.message}`); }
+    mostrarStatus('statusGrupos', 'ok', `Site "${nome}" adicionado.`);
+    renderizarGrupos();
+  }catch(e){
+    mostrarStatus('statusGrupos', 'erro', e.message);
+  }
 }
 
 async function removerSite(grupoId, siteId){
-  if(!confirm('Remover este site do grupo?')) return;
-  config.grupos[grupoId].sites = config.grupos[grupoId].sites.filter(s => s.id !== siteId);
   try{
+    config.grupos[grupoId].sites = config.grupos[grupoId].sites.filter(s => s.id !== siteId);
+    mostrarStatus('statusGrupos', 'carregando', 'Salvando…');
     await salvarConfigNoGitHub(`Remove site ${siteId} de ${grupoId}`);
-    montarListaFontes(Object.keys(config.grupos));
-  }catch(e){ alert(`Erro ao salvar: ${e.message}`); }
+    mostrarStatus('statusGrupos', 'ok', 'Site removido.');
+    renderizarGrupos();
+  }catch(e){
+    mostrarStatus('statusGrupos', 'erro', e.message);
+  }
 }
 
-function normalizar(texto){
-  return (texto || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+async function adicionarGrupo(){
+  try{
+    const id = document.getElementById('novoGrupoId').value.trim();
+    const nome = document.getElementById('novoGrupoNome').value.trim();
+    if(!id || !nome) throw new Error('Preencha ID e nome do grupo.');
+    if(config.grupos[id]) throw new Error('Já existe um grupo com esse ID.');
+    config.grupos[id] = { nome, sites: [] };
+    mostrarStatus('statusGrupos', 'carregando', 'Salvando…');
+    await salvarConfigNoGitHub(`Adiciona grupo ${nome}`);
+    mostrarStatus('statusGrupos', 'ok', `Grupo "${nome}" adicionado. Crie também data/${id}.json manualmente com "[]" caso o feed não mostre a aba.`);
+    renderizarGrupos();
+  }catch(e){
+    mostrarStatus('statusGrupos', 'erro', e.message);
+  }
 }
 
-function renderizarFeed(){
-  const idsGrupos = grupoAtivo === 'todos' ? Object.keys(config.grupos) : [grupoAtivo];
-  let itens = [];
-  idsGrupos.forEach(id => {
-    itens = itens.concat(itensPorGrupo[id].map(i => ({...i, _grupoNome: config.grupos[id].nome})));
-  });
-  itens.sort((a,b) => new Date(b.data_publicacao) - new Date(a.data_publicacao));
-
-  const totalAntesDaBusca = itens.length;
-  if(termoBusca.trim()){
-    const alvo = normalizar(termoBusca);
-    itens = itens.filter(item =>
-      normalizar(item.titulo).includes(alvo) ||
-      normalizar(item.resumo).includes(alvo) ||
-      normalizar(item.fonte).includes(alvo)
-    );
-  }
-
-  document.getElementById('tituloFeed').textContent = grupoAtivo === 'todos' ? 'Todas as notícias' : config.grupos[grupoAtivo].nome;
-  document.getElementById('subtituloFeed').textContent = termoBusca.trim()
-    ? `${itens.length} de ${totalAntesDaBusca} notícia${totalAntesDaBusca===1?'':'s'} — busca: "${termoBusca.trim()}"`
-    : `${itens.length} notícia${itens.length===1?'':'s'} no feed`;
-
-  const conteudo = document.getElementById('conteudo');
-
-  if(itens.length === 0){
-    conteudo.innerHTML = termoBusca.trim()
-      ? `<div class="vazio"><strong>Nada encontrado</strong>Nenhuma notícia bate com "${termoBusca.trim()}" neste grupo. Tenta outro termo ou limpa a busca.</div>`
-      : `<div class="vazio"><strong>Nenhuma notícia ainda</strong>A coleta roda todo dia às 03:00 (horário de Brasília). Assim que houver novidade nos sites cadastrados, ela aparece aqui.</div>`;
-    return;
-  }
-
-  conteudo.innerHTML = `<ul class="feed">${montarListaComSeparadores(itens)}</ul>`;
-
-  conteudo.querySelectorAll('.linha').forEach(linha => {
-    linha.addEventListener('click', () => {
-      linha.closest('li.item').classList.toggle('aberto');
+// ---------- atualização manual completa ----------
+async function atualizarAgora(){
+  try{
+    mostrarStatus('statusAtualizar', 'carregando', 'Disparando a coleta…');
+    await chamarGitHub('/actions/workflows/coletar.yml/dispatches', {
+      method: 'POST',
+      body: JSON.stringify({ ref: 'main', inputs: {} }),
     });
-  });
+    mostrarStatus('statusAtualizar', 'ok', 'Disparado. Acompanhe em Actions no GitHub — leva de 1 a 3 minutos.');
+  }catch(e){
+    mostrarStatus('statusAtualizar', 'erro', e.message);
+  }
 }
 
-function chaveDia(iso){
-  return new Date(iso).toDateString();
+// ---------- notícia manual ----------
+async function adicionarManual(){
+  try{
+    const grupoId = document.getElementById('manualGrupo').value;
+    const url = document.getElementById('manualUrl').value.trim();
+    if(!grupoId || !url) throw new Error('Preencha grupo e link.');
+
+    mostrarStatus('statusManual', 'carregando', 'Disparando a coleta desta notícia…');
+    await chamarGitHub('/actions/workflows/coletar.yml/dispatches', {
+      method: 'POST',
+      body: JSON.stringify({ ref: 'main', inputs: { grupo: grupoId, url } }),
+    });
+    mostrarStatus('statusManual', 'ok', 'Disparado. Em 1-2 minutos a notícia aparece no feed (a Action busca título/imagem/resumo automaticamente).');
+    document.getElementById('manualUrl').value = '';
+  }catch(e){
+    mostrarStatus('statusManual', 'erro', e.message);
+  }
 }
 
-function formatarCabecalhoDia(iso){
-  const texto = new Date(iso).toLocaleDateString('pt-BR', {
-    weekday: 'long', day: '2-digit', month: 'long', year: 'numeric'
-  });
-  return texto.charAt(0).toUpperCase() + texto.slice(1);
-}
-
-function montarListaComSeparadores(itens){
-  let html = '';
-  let diaAnterior = null;
-  itens.forEach(item => {
-    const dia = chaveDia(item.data_publicacao);
-    if(dia !== diaAnterior){
-      html += `<li class="separador-dia">${formatarCabecalhoDia(item.data_publicacao)}</li>`;
-      diaAnterior = dia;
-    }
-    html += itemHtml(item);
-  });
-  return html;
-}
-
-function itemHtml(item){
-  const dias = diasDesde(item.data_captura);
-  const ehNovo = diasDesde(item.data_publicacao) < 1;
-  const thumb = item.thumbnail
-    ? `<img class="thumb" src="${item.thumbnail}" alt="" loading="lazy" onerror="this.outerHTML='<div class=&quot;thumb sem-imagem&quot;>C</div>'">`
-    : `<div class="thumb sem-imagem">C</div>`;
-
-  return `
-    <li class="item">
-      <div class="linha">
-        ${thumb}
-        <div class="info">
-          <div class="titulo-linha">
-            <p class="titulo">${item.titulo}</p>
-            ${ehNovo ? ICONE_NOVO : ''}
-          </div>
-          <div class="meta">
-            <span>${item.fonte}</span>
-            <span class="grupo-tag">${item._grupoNome}</span>
-            <span>${formatarData(item.data_publicacao)}</span>
-            <span>há ${dias} dia${dias===1?'':'s'} no feed</span>
-          </div>
-        </div>
-      </div>
-      <div class="detalhe">
-        <div class="detalhe-inner">
-          ${item.resumo.split('\n').filter(p=>p.trim()).map(p=>`<p>${p}</p>`).join('')}
-          <a class="ler-original" href="${item.link}" target="_blank" rel="noopener">Ler no site original →</a>
-        </div>
-      </div>
-    </li>`;
-}
-
-carregar();
-
-document.getElementById('campoBusca').addEventListener('input', (e) => {
-  termoBusca = e.target.value;
-  renderizarFeed();
-});
-
+carregarCamposAcesso();
+carregarConfig();
 </script>
 </body>
 </html>
