@@ -157,10 +157,17 @@ def extrair_thumbnail_rss(entrada) -> str:
     for link in entrada.get("links", []):
         if str(link.get("type", "")).startswith("image/"):
             return link.get("href", "")
-    html_bruto = entrada.get("summary", "") or entrada.get("description", "")
-    match = re.search(r'<img[^>]+src="([^"]+)"', html_bruto)
-    if match:
-        return match.group(1)
+
+    # tenta achar <img> no resumo e, se não achar, no conteúdo completo
+    # (content:encoded costuma trazer o corpo inteiro do post, com a imagem)
+    candidatos_html = [entrada.get("summary", "") or entrada.get("description", "")]
+    for bloco in entrada.get("content", []):
+        candidatos_html.append(bloco.get("value", ""))
+
+    for html_bruto in candidatos_html:
+        match = re.search(r'<img[^>]+src="([^"]+)"', html_bruto)
+        if match:
+            return match.group(1)
     return ""
 
 
@@ -175,6 +182,12 @@ def coletar_rss(site, ja_conhecidos):
         resumo_bruto = entrada.get("summary", "") or entrada.get("description", "")
         resumo_bruto = BeautifulSoup(resumo_bruto, "html.parser").get_text(" ", strip=True)
         thumbnail = extrair_thumbnail_rss(entrada)
+        if not thumbnail:
+            try:
+                thumbnail = extrair_open_graph(link)["imagem"] or ""
+            except Exception as erro:  # noqa: BLE001
+                print(f"  [aviso] sem thumbnail via OG para {link}: {erro}", file=sys.stderr)
+                thumbnail = ""
         if "published_parsed" in entrada and entrada.published_parsed:
             data_pub = datetime(*entrada.published_parsed[:6], tzinfo=timezone.utc).isoformat()
         else:
