@@ -44,10 +44,6 @@
           "alerta": false
         }
       ]
-    },
-    "cultura": {
-      "nome": "Cultura",
-      "sites": []
     }
   }
 }
