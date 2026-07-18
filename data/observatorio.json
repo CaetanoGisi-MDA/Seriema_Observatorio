@@ -168,18 +168,6 @@
     "data_captura": "2026-07-11T21:12:26.259152+00:00"
   },
   {
-    "link": "https://ispn.org.br/reportagem/profetas-do-tempo-sabedoria-sinais-e-futuro-no-sertao-da-abundancia/",
-    "titulo": "Profetas do tempo: sabedoria, sinais e futuro no sertão da abundância",
-    "thumbnail": "https://ispn.org.br/wp-content/uploads/2026/06/202507_PI-bx_PaulaCinquetti_084-1024x683.jpg",
-    "resumo": "Saberes ancestrais e inovações sociais constroem um futuro sustentável no interior do Piauí. Primeiro episódio:  A cultura cria raízes",
-    "data_publicacao": "2026-06-17T11:00:14+00:00",
-    "id": "845b7980a13930b7",
-    "fonte": "ISPN",
-    "site_id": "ispn",
-    "grupo": "observatorio",
-    "data_captura": "2026-07-11T21:12:26.259156+00:00"
-  },
-  {
     "link": "https://sumauma.com/como-a-tilapia-um-peixe-da-africa-foi-trazida-ao-xingu-como-mercadoria-e-agora-ameaca-a-vida/",
     "titulo": "Como a Tilápia, um peixe da África, foi trazida ao Xingu como mercadoria e agora ameaça a vida",
     "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/07/08121627/01.tilapia-abresmoldura.webp",
@@ -310,5 +298,17 @@
     "site_id": "sumauma",
     "grupo": "observatorio",
     "data_captura": "2026-07-16T16:52:15.205687+00:00"
+  },
+  {
+    "link": "https://ispn.org.br/noticia/do-cerrado-para-a-sala-de-aula-cozinha-experimental-baru-transforma-alimentos-em-conhecimento/",
+    "titulo": "Do Cerrado para a sala de aula: Cozinha Experimental Baru transforma alimentos em conhecimento",
+    "thumbnail": "https://ispn.org.br/wp-content/uploads/2026/07/20260612_120151-scaled.jpg",
+    "resumo": "Inaugurado na Escola Família Agrícola de Porto Nacional (TO), o novo espaço foi melhorado para fortalecer atividades práticas, estimular experiências com alimentos e valorizar a sociobiodiversidade",
+    "data_publicacao": "2026-07-17T19:59:58+00:00",
+    "id": "3721fdfc8b17749b",
+    "fonte": "ISPN",
+    "site_id": "ispn",
+    "grupo": "observatorio",
+    "data_captura": "2026-07-18T07:54:29.660193+00:00"
   }
 ]
