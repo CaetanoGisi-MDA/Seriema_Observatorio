@@ -204,18 +204,6 @@
     "data_captura": "2026-07-11T21:12:34.392667+00:00"
   },
   {
-    "link": "https://sumauma.com/boi-bala-e-biblia-o-discurso-de-flavio-bolsonaro-em-uma-amazonia-em-disputa/",
-    "titulo": "Boi, bala e Bíblia: o discurso de Flávio Bolsonaro em uma Amazônia em disputa",
-    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/06/22163622/01.flaviobolsonaro_abre.webp",
-    "resumo": "Em pré-campanha, filho de Jair Bolsonaro emulou o pai em viagem a Altamira ao prometer a ruralistas que vai regularizar terras irregulares e afrouxar a fiscalização ambiental; em Belém, buscou apoio de pastores e lideranças evangélicas",
-    "data_publicacao": "2026-06-23T09:57:04+00:00",
-    "id": "02c3c471699f0428",
-    "fonte": "Sumaúma",
-    "site_id": "sumauma",
-    "grupo": "observatorio",
-    "data_captura": "2026-07-11T21:12:34.392673+00:00"
-  },
-  {
     "link": "https://sumauma.com/luciana-gatti-o-congresso-esta-decidindo-que-muito-mais-brasileiros-vao-morrer/",
     "titulo": "Luciana Gatti: ‘O Congresso está decidindo que muito mais brasileiros vão morrer’",
     "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/07/13105644/01.lucianagatti_abre.webp",
@@ -298,5 +286,29 @@
     "site_id": "observatorio-da-mineracao",
     "grupo": "observatorio",
     "data_captura": "2026-07-22T08:32:34.105368+00:00"
+  },
+  {
+    "link": "https://ispn.org.br/artigo-de-opiniao/a-restauracao-ecologica-so-sera-possivel-incluindo-as-comunidades-locais/",
+    "titulo": "A restauração ecológica só será possível incluindo as comunidades locais",
+    "thumbnail": "https://ispn.org.br/wp-content/uploads/2026/07/Daniela_Almeida_Kaiowa_Maranhao_2025-9223-1-1024x683.png",
+    "resumo": "A restauração ecológica acumula significados imateriais e práticos, e seu sucesso depende de um arranjo que fortaleça a governança comunitária",
+    "data_publicacao": "2026-07-23T13:44:51+00:00",
+    "id": "8871cff87be5330f",
+    "fonte": "ISPN",
+    "site_id": "ispn",
+    "grupo": "observatorio",
+    "data_captura": "2026-07-24T08:30:24.122470+00:00"
+  },
+  {
+    "link": "https://sumauma.com/a-compra-das-almas-dinheiro-e-antenas-de-elon-musk-ameacam-a-sobrevivencia-dos-yanomami/",
+    "titulo": "A compra das almas: dinheiro e antenas de Elon Musk ameaçam a sobrevivência dos Yanomami",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/07/15165255/01.yanomamiclaudia_1-3_abre.webp",
+    "resumo": "A entrada de celulares, armas, álcool e drogas, levados pelos garimpeiros ou oferecidos nas cidades onde vão buscar benefícios sociais, mudou a juventude indígena e tornou-se o grande impasse para o futuro do povo que segura o céu",
+    "data_publicacao": "2026-07-23T10:00:07+00:00",
+    "id": "939ef8b21c42220f",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-07-24T08:30:26.128727+00:00"
   }
 ]
