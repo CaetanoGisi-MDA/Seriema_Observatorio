@@ -60,18 +60,6 @@
     "data_captura": "2026-07-11T21:12:23.369009+00:00"
   },
   {
-    "link": "https://observatoriodamineracao.com.br/policia-federal-indicia-empresarios-diretor-geral-e-alto-escalao-da-anm-por-organizacao-criminosa-e-outras-acusacoes-em-novos-relatorios/",
-    "titulo": "Polícia Federal indicia empresários, diretor-geral e alto escalão da ANM por organização criminosa e outras acusações em novos relatórios",
-    "thumbnail": "https://observatoriodamineracao.com.br/wp-content/uploads/2025/04/Visita-tecnica-ALMG-Empabra-Mina-Corumi-_-03-06-2024.-Foto_-Luiz-Santana_ALMG.jpg",
-    "resumo": "Por Lucas Ragazzi, do O Fator, e Maurício Angelo, do Observatório da Mineração A Polícia Federal concluiu os inquéritos das operações Rejeito e Parcours e indiciou 34 pessoas na primeira e outras 17 na segunda, sob a suspeita de integrarem uma organização criminosa dedicada a explorar ilegalmente minério de ferro em áreas tombadas da Serra […] O post Polícia Federal indicia empresários, diretor-geral e alto escalão da ANM por organização criminosa e outras acusações em novos relatórios apareceu primeiro em Observatório da Mineração .",
-    "data_publicacao": "2026-06-27T15:14:48+00:00",
-    "id": "63d3d29e510fff9b",
-    "fonte": "Observatório da Mineração",
-    "site_id": "observatorio-da-mineracao",
-    "grupo": "observatorio",
-    "data_captura": "2026-07-11T21:12:23.369014+00:00"
-  },
-  {
     "link": "https://ispn.org.br/noticia/nova-regulamentacao-traz-mais-diversidade-para-a-alimentacao-escolar/",
     "titulo": "Nova regulamentação traz mais diversidade para a alimentação escolar",
     "thumbnail": "https://ispn.org.br/wp-content/uploads/2026/07/Vale-do-Jequitinhonha_Anderson-Coelho_Alimentacao_Escolar.jpg",
@@ -262,5 +250,17 @@
     "site_id": "sumauma",
     "grupo": "observatorio",
     "data_captura": "2026-07-24T08:30:26.128727+00:00"
+  },
+  {
+    "link": "https://sumauma.com/contra-o-negacionismo-diante-da-emergencia-climatica-cientistas-abracam-candidaturas-ao-congresso/",
+    "titulo": "Contra o negacionismo diante da emergência climática, cientistas abraçam candidaturas ao Congresso",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/07/24180351/01_abre_Cientistas-Candidatos_.webp",
+    "resumo": "Pesquisadores e professores trocam laboratórios e salas de aula pelo embate político nas eleições",
+    "data_publicacao": "2026-07-27T10:00:01+00:00",
+    "id": "2a21b3570883c841",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-07-28T08:37:10.527163+00:00"
   }
 ]
