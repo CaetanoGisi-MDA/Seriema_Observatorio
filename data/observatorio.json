@@ -12,18 +12,6 @@
     "data_captura": "2026-07-11T21:12:23.368978+00:00"
   },
   {
-    "link": "https://observatoriodamineracao.com.br/sigma-lithium-tenta-censurar-materia-e-envia-mais-uma-notificacao-extrajudicial-ao-observatorio-da-mineracao/",
-    "titulo": "Sigma Lithium tenta censurar matéria e envia mais uma notificação extrajudicial ao Observatório da Mineração",
-    "thumbnail": "https://observatoriodamineracao.com.br/wp-content/uploads/2026/06/tela_sigma_zeladoria-1024x581.png",
-    "resumo": "Em 6 de julho de 2026, a Sigma Mineração S.A. (Sigma Lithium), por seus advogados, enviou ao Observatório da Mineração notificação extrajudicial a respeito da reportagem “Polícia Federal indicia empresários, diretor-geral e alto escalão da ANM por organização criminosa e outras acusações em novos relatórios”, publicada em 27 de junho. A empresa pede a retirada […] O post Sigma Lithium tenta censurar matéria e envia mais uma notificação extrajudicial ao Observatório da Mineração apareceu primeiro em Observatório da Mineração .",
-    "data_publicacao": "2026-07-08T16:59:02+00:00",
-    "id": "1016f57d10923fbc",
-    "fonte": "Observatório da Mineração",
-    "site_id": "observatorio-da-mineracao",
-    "grupo": "observatorio",
-    "data_captura": "2026-07-11T21:12:23.368997+00:00"
-  },
-  {
     "link": "https://ispn.org.br/noticia/nova-regulamentacao-traz-mais-diversidade-para-a-alimentacao-escolar/",
     "titulo": "Nova regulamentação traz mais diversidade para a alimentação escolar",
     "thumbnail": "https://ispn.org.br/wp-content/uploads/2026/07/Vale-do-Jequitinhonha_Anderson-Coelho_Alimentacao_Escolar.jpg",
@@ -250,5 +238,17 @@
     "site_id": "sumauma",
     "grupo": "observatorio",
     "data_captura": "2026-08-07T07:18:59.660864+00:00"
+  },
+  {
+    "link": "https://ispn.org.br/nota-institucional/o-marco-temporal-foi-rejeitado-o-risco-de-retrocessos-permanece/",
+    "titulo": "O Marco Temporal foi rejeitado. O risco de retrocessos permanece",
+    "thumbnail": "https://ispn.org.br/wp-content/uploads/2026/08/Acampamento-Terra-Livre-ATL.jpg",
+    "resumo": "Nota do ISPN sobre o julgamento do Marco Temporal no Supremo Tribunal Federal",
+    "data_publicacao": "2026-08-07T16:00:45+00:00",
+    "id": "23e7aba677887758",
+    "fonte": "ISPN",
+    "site_id": "ispn",
+    "grupo": "observatorio",
+    "data_captura": "2026-08-08T06:56:49.632643+00:00"
   }
 ]
