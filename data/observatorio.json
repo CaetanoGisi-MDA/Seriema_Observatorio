@@ -1,17 +1,5 @@
 [
   {
-    "link": "https://observatoriodamineracao.com.br/setor-mineral-acumula-r-73-bilhoes-de-dividas-enquanto-congresso-prepara-novo-pacote-de-incentivos-com-o-pl-dos-minerais-criticos/",
-    "titulo": "Setor mineral acumula R$ 73 bilhões de dívidas enquanto Congresso prepara novo pacote de incentivos com o PL dos minerais críticos",
-    "thumbnail": "https://observatoriodamineracao.com.br/wp-content/uploads/2026/07/grafico-maiores-devedoras-1024x1024.png",
-    "resumo": "R$  73 bilhões. Esta é a soma da Dívida Ativa da União e do Fundo de Garantia do Tempo de Serviço (FGTS) inseridos pelo governo federal até abril deste ano nas cobranças (judicial ou administrativa) de valores não pagos por empresas do setor mineral brasileiro. Com este valor seria possível manter o investimento do governo […] O post Setor mineral acumula R$ 73 bilhões de dívidas enquanto Congresso prepara novo pacote de incentivos com o PL dos minerais críticos apareceu primeiro em Observatório da Mineração .",
-    "data_publicacao": "2026-07-21T14:14:14+00:00",
-    "id": "217b1acd17277d62",
-    "fonte": "Observatório da Mineração",
-    "site_id": "observatorio-da-mineracao",
-    "grupo": "observatorio",
-    "data_captura": "2026-07-22T08:32:34.105368+00:00"
-  },
-  {
     "link": "https://ispn.org.br/artigo-de-opiniao/a-restauracao-ecologica-so-sera-possivel-incluindo-as-comunidades-locais/",
     "titulo": "A restauração ecológica só será possível incluindo as comunidades locais",
     "thumbnail": "https://ispn.org.br/wp-content/uploads/2026/07/Daniela_Almeida_Kaiowa_Maranhao_2025-9223-1-1024x683.png",
@@ -262,5 +250,29 @@
     "site_id": "sumauma",
     "grupo": "observatorio",
     "data_captura": "2026-08-19T06:46:52.384844+00:00"
+  },
+  {
+    "link": "https://observatoriodamineracao.com.br/a-engrenagem-que-transformou-terras-raras-de-goias-em-ativo-geopolitico-dos-eua/",
+    "titulo": "A engrenagem que transformou terras raras de Goiás em ativo geopolítico dos EUA",
+    "thumbnail": "https://observatoriodamineracao.com.br/wp-content/uploads/2026/08/FORGE_TWTW_02022026_A-1-1024x683.webp",
+    "resumo": "Por Tatiana Dias e Maurício Angelo* Enquanto o governo brasileiro preparava uma política nacional de terras raras que previa projetar o país como liderança, assegurando sua soberania, o governador de Goiás, estado brasileiro dono da maior reserva desses minérios essenciais para a indústria de tecnologia, se antecipou. Não apenas aprovou uma política própria, escanteando o […] O post A engrenagem que transformou terras raras de Goiás em ativo geopolítico dos EUA apareceu primeiro em Observatório da Mineração .",
+    "data_publicacao": "2026-08-20T15:15:04+00:00",
+    "id": "213b468285cba1ba",
+    "fonte": "Observatório da Mineração",
+    "site_id": "observatorio-da-mineracao",
+    "grupo": "observatorio",
+    "data_captura": "2026-08-21T06:50:39.454546+00:00"
+  },
+  {
+    "link": "https://sumauma.com/se-na-pandemia-faltou-oxigenio-em-manaus-agora-familiares-sofrem-pelo-sufocamento-da-memoria/",
+    "titulo": "Se na pandemia faltou oxigênio em Manaus, agora familiares sofrem pelo sufocamento da memória",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/08/19112109/01.covidmanaus_abre1.webp",
+    "resumo": "Entre covas coletivas abertas às pressas, famílias do Amazonas disputam o direito de lembrar seus mortos da covid-19: sabem que só com o julgamento dos responsáveis pela imensa violação de direitos humanos será possível encerrar o luto",
+    "data_publicacao": "2026-08-20T10:03:21+00:00",
+    "id": "4898744f1edde865",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-08-21T06:50:44.947477+00:00"
   }
 ]
