@@ -1,29 +1,5 @@
 [
   {
-    "link": "https://sumauma.com/contra-o-negacionismo-diante-da-emergencia-climatica-cientistas-abracam-candidaturas-ao-congresso/",
-    "titulo": "Contra o negacionismo diante da emergência climática, cientistas abraçam candidaturas ao Congresso",
-    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/07/24180351/01_abre_Cientistas-Candidatos_.webp",
-    "resumo": "Pesquisadores e professores trocam laboratórios e salas de aula pelo embate político nas eleições",
-    "data_publicacao": "2026-07-27T10:00:01+00:00",
-    "id": "2a21b3570883c841",
-    "fonte": "Sumaúma",
-    "site_id": "sumauma",
-    "grupo": "observatorio",
-    "data_captura": "2026-07-28T08:37:10.527163+00:00"
-  },
-  {
-    "link": "https://observatoriodamineracao.com.br/entre-2015-e-2025-mineradoras-receberam-ao-menos-r-49-bilhoes-em-isencoes-de-impostos-federais/",
-    "titulo": "Entre 2015 e 2025, mineradoras receberam ao menos R$ 49 bilhões em isenções de impostos federais",
-    "thumbnail": "https://observatoriodamineracao.com.br/wp-content/uploads/2026/07/infografico_top20_beneficios_acionistas_obm_parte1_top10-819x1024.png",
-    "resumo": "Por Lúcio Lambranho e Maurício Angelo O novo pacote de isenções embutido no PL dos minerais críticos não considera ao menos R$ 49,3 bilhões em benefícios tributários federais que 53 empresas de extração mineral direta acumularam entre 2015 e 2025, segundo dados da Receita Federal pesquisados e consolidados pelo Observatório da Mineração. Este fato, como […]",
-    "data_publicacao": "2026-07-28T06:00:00+00:00",
-    "id": "589ae42da297a226",
-    "fonte": "Observatório da Mineração",
-    "site_id": "observatorio-da-mineracao",
-    "grupo": "observatorio",
-    "data_captura": "2026-07-29T08:43:58.581118+00:00"
-  },
-  {
     "link": "https://observatoriodamineracao.com.br/brasil-perde-bilhoes-em-royalties-da-mineracao-diante-de-sonegacao-generalizada-e-amplia-prejuizo-para-estados-e-municipios/",
     "titulo": "Brasil perde bilhões em royalties da mineração diante de sonegação generalizada e amplia prejuízo para estados e municípios",
     "thumbnail": "https://observatoriodamineracao.com.br/wp-content/uploads/2026/07/grafico_cfem_final-1024x725.png",
@@ -262,5 +238,41 @@
     "site_id": "sumauma",
     "grupo": "observatorio",
     "data_captura": "2026-08-25T06:51:13.028995+00:00"
+  },
+  {
+    "link": "https://sumauma.com/diante-do-avanco-do-bolsonarismo-lula-abraca-destruidores-da-amazonia-em-busca-da-reeleicao/",
+    "titulo": "Diante do avanço do bolsonarismo, Lula abraça destruidores da Amazônia em busca da reeleição",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/08/25145617/01.aliancasPT_abre-1.webp",
+    "resumo": "Alianças do PT no Norte incluem uma intervenção em Rondônia, que tentou sacrificar a candidatura da ativista Neidinha Suruí, e o apoio a candidatos que colaboraram para arruinar o licenciamento ambiental",
+    "data_publicacao": "2026-08-27T03:12:59+00:00",
+    "id": "f76945df8e8fbc5f",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-08-27T17:26:04.152655+00:00"
+  },
+  {
+    "link": "https://sumauma.com/luz-em-seu-ouvido-a-radio-sumauma-esta-de-volta-aos-tocadores/",
+    "titulo": "Luz em seu ouvido: a Rádio SUMAÚMA está de volta aos tocadores",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/08/25133139/01.estreiaradio_abre.jpg.webp",
+    "resumo": "Direto do Centro do Mundo, a nova temporada do nosso jornalismo de escutar estreia em 28 de agosto",
+    "data_publicacao": "2026-08-27T03:11:09+00:00",
+    "id": "8ace7bb3be9a9453",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-08-27T17:26:04.152674+00:00"
+  },
+  {
+    "link": "https://sumauma.com/e-hoje-sumauma-debate-repovoar-o-congresso/",
+    "titulo": "É hoje. SUMAÚMA Debate: Repovoar o Congresso",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/08/14140549/02.witotoegatti_fim.webp",
+    "resumo": "A liderança indígena Vanda Witoto e a cientista Luciana Gatti se encontram no programa de estreia às 8 da noite. A mediação é de Eliane Brum. Participe ao vivo no Instagram ou no YouTube",
+    "data_publicacao": "2026-08-26T19:54:45+00:00",
+    "id": "afca35043346b6c2",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-08-27T17:26:04.152679+00:00"
   }
 ]
