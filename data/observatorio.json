@@ -12,18 +12,6 @@
     "data_captura": "2026-08-04T08:40:01.295487+00:00"
   },
   {
-    "link": "https://sumauma.com/ameacados-pelo-crime-organizado-os-ashaninka-encaram-a-burocracia-de-brasilia-em-busca-de-socorro/",
-    "titulo": "Ameaçados pelo crime organizado, os Ashaninka encaram a burocracia de Brasília em busca de socorro",
-    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/07/30155055/01_Ashaninkas.webp",
-    "resumo": "Povo que vive na fronteira entre Brasil e Peru está cercado pelo narcotráfico e tem principais lideranças juradas de morte",
-    "data_publicacao": "2026-08-03T10:00:15+00:00",
-    "id": "e908e76e2e36d2e4",
-    "fonte": "Sumaúma",
-    "site_id": "sumauma",
-    "grupo": "observatorio",
-    "data_captura": "2026-08-04T08:40:11.258303+00:00"
-  },
-  {
     "link": "https://observatoriodamineracao.com.br/incentivos-bilionarios-a-fertilizantes-avancam-no-legislativo-apesar-de-impactos-socioambientais-e-em-terras-indigenas/",
     "titulo": "Incentivos bilionários a fertilizantes avançam no Legislativo apesar de impactos socioambientais e em terras indígenas",
     "thumbnail": "https://observatoriodamineracao.com.br/wp-content/uploads/2026/08/infografico_top10_fertilizantes_beneficios_acionistas_obm-819x1024.png",
@@ -298,5 +286,29 @@
     "site_id": "sumauma",
     "grupo": "observatorio",
     "data_captura": "2026-09-01T11:17:16.160238+00:00"
+  },
+  {
+    "link": "https://observatoriodamineracao.com.br/factsheet-terras-raras/",
+    "titulo": "Factsheet – Terras Raras",
+    "thumbnail": "https://observatoriodamineracao.com.br/wp-content/uploads/2026/09/Captura-de-tela-2026-09-01-101449.png",
+    "resumo": "O Brasil tem uma das maiores reservas de terras raras do mundo, grupo de minerais usado em veículos elétricos, turbinas eólicas, eletrônicos e na indústria de defesa. A produção nacional, porém, ainda é pequena e restrita à etapa de menor valor: o país exporta concentrado e não domina o refino nem a fabricação de ímãs, […] O post Factsheet – Terras Raras apareceu primeiro em Observatório da Mineração .",
+    "data_publicacao": "2026-09-01T13:12:13+00:00",
+    "id": "19582e35bf94c31d",
+    "fonte": "Observatório da Mineração",
+    "site_id": "observatorio-da-mineracao",
+    "grupo": "observatorio",
+    "data_captura": "2026-09-02T10:51:20.730572+00:00"
+  },
+  {
+    "link": "https://ispn.org.br/noticia/ecos-dos-territorios-oficina-reune-comunidades-do-cerrado-caatinga-e-amazonia-para-troca-de-saberes/",
+    "titulo": "Ecos dos Territórios: oficina reúne comunidades do Cerrado, Caatinga e Amazônia para troca de saberes",
+    "thumbnail": "https://ispn.org.br/wp-content/uploads/2026/09/20260819_111245-scaled.jpg",
+    "resumo": "Entre os dias 18 e 20 de agosto, evento em Brasília (DF) teve a participação de 98 representantes de 50 projetos aprovados nos 38º e 39º editais do Fundo Ecos",
+    "data_publicacao": "2026-09-01T14:13:07+00:00",
+    "id": "07e47086dc460bd9",
+    "fonte": "ISPN",
+    "site_id": "ispn",
+    "grupo": "observatorio",
+    "data_captura": "2026-09-02T10:51:23.182160+00:00"
   }
 ]
