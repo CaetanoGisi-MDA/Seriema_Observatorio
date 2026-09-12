@@ -1,17 +1,5 @@
 [
   {
-    "link": "https://sumauma.com/o-terror-e-a-crueldade-do-estado-a-anatomia-de-uma-ofensiva-contra-a-fiscalizacao-ambiental/",
-    "titulo": "O ‘terror’ e a ‘crueldade’ do Estado: a anatomia de uma ofensiva contra a fiscalização ambiental",
-    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/08/12152924/01.ofensivaICMBio_abre-1.webp",
-    "resumo": "Enxurrada de postagens contra operações do ICMBio no Pará mostra a força de uma rede de influenciadores digitais ligados à pecuária, alavanca candidatos e ilustra estratégia da direita para capturar o apoio de pequenos agricultores",
-    "data_publicacao": "2026-08-13T10:01:13+00:00",
-    "id": "8d9e616e7688cdd6",
-    "fonte": "Sumaúma",
-    "site_id": "sumauma",
-    "grupo": "observatorio",
-    "data_captura": "2026-08-14T07:27:19.963766+00:00"
-  },
-  {
     "link": "https://osociobio.org.br/pnl/plano-nacional-de-logistica-reconhece-sociobioeconomia-na-amazonia-como-prioridade-do-planejamento-do-setor-de-transportes/?utm_source=rss&utm_medium=rss&utm_campaign=plano-nacional-de-logistica-reconhece-sociobioeconomia-na-amazonia-como-prioridade-do-planejamento-do-setor-de-transportes",
     "titulo": "Plano Nacional de Logística reconhece sociobioeconomia na Amazônia como prioridade do planejamento do setor de transportes",
     "thumbnail": "https://osociobio.org.br/site/wp-content/uploads/2026/08/WhatsApp-Image-2026-08-14-at-16.31.01-3.jpeg",
@@ -322,5 +310,41 @@
     "site_id": "sumauma",
     "grupo": "observatorio",
     "data_captura": "2026-09-11T10:48:19.914469+00:00"
+  },
+  {
+    "link": "https://ispn.org.br/noticia/no-dia-do-cerrado-campanha-votepelocerrado-convoca-eleitores-a-colocar-o-futuro-do-bioma-no-debate-das-eleicoes-de-2026/",
+    "titulo": "No Dia do Cerrado, campanha #VotePeloCerrado convoca eleitores a colocar o futuro do bioma no debate das eleições de 2026",
+    "thumbnail": "https://ispn.org.br/wp-content/uploads/2026/09/campanha-vote-pelo-cerrado-2026-1024x768.jpeg",
+    "resumo": "Iniciativa apresenta Carta-Compromisso com oito propostas para proteção das águas, dos territórios, da biodiversidade e dos direitos dos povos do Cerrado",
+    "data_publicacao": "2026-09-11T13:37:26+00:00",
+    "id": "83b5236262546450",
+    "fonte": "ISPN",
+    "site_id": "ispn",
+    "grupo": "observatorio",
+    "data_captura": "2026-09-12T10:17:06.092449+00:00"
+  },
+  {
+    "link": "https://sumauma.com/escute-agora-as-eleicoes-e-os-candidatos-que-destroem-o-meio-ambiente/",
+    "titulo": "Escute agora: as eleições e os candidatos que destróem o meio ambiente",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/09/11110451/01.abreradio_semana3.webp",
+    "resumo": "Falamos também da crise do Master e consequências, de Belo Sun e a devastação na Volta Grande do Xingu e sobre o japiim, que brilha no sextou amazônico ao lado de Darlon Neres",
+    "data_publicacao": "2026-09-11T14:38:08+00:00",
+    "id": "2be08d3d20cddf42",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-09-12T10:17:08.892972+00:00"
+  },
+  {
+    "link": "https://sumauma.com/candidatos-somam-176-milhoes-de-reais-em-multas-por-destruicao-do-meio-ambiente-na-amazonia/",
+    "titulo": "Candidatos somam 176 milhões de reais em multas por destruição do meio ambiente na Amazônia",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/09/09145808/01.multascandidatos_abre2.webp",
+    "resumo": "Levantamento de SUMAÚMA encontrou 75 nomes que disputam uma vaga nas eleições de 2026 com infrações na Amazônia; entre eles estão aliados de Flávio Bolsonaro, que fizeram do ataque à fiscalização ambiental bandeira eleitoral",
+    "data_publicacao": "2026-09-11T13:27:06+00:00",
+    "id": "578439aea38638cd",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-09-12T10:17:08.892990+00:00"
   }
 ]
