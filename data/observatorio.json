@@ -502,5 +502,29 @@
     "site_id": "ispn",
     "grupo": "observatorio",
     "data_captura": "2026-09-17T11:12:20.294500+00:00"
+  },
+  {
+    "link": "https://ispn.org.br/artigo-de-opiniao/financiamento-climatico-a-partir-dos-territorios-recursos-poder-e-justica-socioambiental/",
+    "titulo": "Financiamento climático a partir dos territórios: recursos,  poder e justiça socioambiental",
+    "thumbnail": "https://ispn.org.br/wp-content/uploads/2026/09/Cristiane-Azevedo-Ecos-dos-Territorios.png",
+    "resumo": "O desafio não se resume apenas a ampliar o financiamento. É preciso discutir como esses recursos circulam, quem participa das decisões e quais organizações têm condições de acessá-los",
+    "data_publicacao": "2026-09-17T13:28:34+00:00",
+    "id": "9e8e32aa2c4651a0",
+    "fonte": "ISPN",
+    "site_id": "ispn",
+    "grupo": "observatorio",
+    "data_captura": "2026-09-18T10:45:43.116054+00:00"
+  },
+  {
+    "link": "https://sumauma.com/por-que-o-congresso-ganhou-tanto-poder-e-por-que-isso-torna-mais-dificil-renova-lo/",
+    "titulo": "Por que o Congresso ganhou tanto poder? E por que isso torna mais difícil renová-lo?",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/09/16155945/01.congressopoder_abre.webp",
+    "resumo": "Emendas impositivas e orçamento secreto garantiram a deputados e senadores mais controle do orçamento federal e, com isso, mais barganha política em seus redutos eleitorais e menos debate real sobre as necessidades do país",
+    "data_publicacao": "2026-09-17T03:13:26+00:00",
+    "id": "75e1012d27560c9f",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-09-18T10:45:44.315618+00:00"
   }
 ]
