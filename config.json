@@ -10,7 +10,7 @@
           "url_feed": "https://osociobio.org.br/feed/",
           "url_sitemap": "",
           "url_base": "https://osociobio.org.br",
-          "ultima_novidade": "2026-09-20T10:51:33.967361+00:00",
+          "ultima_novidade": "2026-09-21T12:16:17.772459+00:00",
           "alerta": false,
           "motivo_alerta": null
         },
@@ -33,8 +33,8 @@
           "url_sitemap": "",
           "url_base": "https://observatoriodamineracao.com.br",
           "ultima_novidade": "2026-09-20T10:51:36.312331+00:00",
-          "alerta": false,
-          "motivo_alerta": null
+          "alerta": true,
+          "motivo_alerta": "Erro na última coleta: a URL não parece ser um feed RSS/Atom válido (https://observatoriodamineracao.com.br/feed/) — confira se falta um caminho tipo /feed/ no final"
         },
         {
           "id": "ispn",
@@ -43,7 +43,7 @@
           "url_feed": "https://ispn.org.br/feed/",
           "url_sitemap": "",
           "url_base": "https://ispn.org.br",
-          "ultima_novidade": "2026-09-20T10:51:37.408073+00:00",
+          "ultima_novidade": "2026-09-21T12:16:20.551497+00:00",
           "alerta": false,
           "motivo_alerta": null
         },
