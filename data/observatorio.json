@@ -514,5 +514,29 @@
     "site_id": "sumauma",
     "grupo": "observatorio",
     "data_captura": "2026-09-22T11:09:21.397239+00:00"
+  },
+  {
+    "link": "https://observatoriodamineracao.com.br/factsheet-nordeste/",
+    "titulo": "Factsheet – Nordeste",
+    "thumbnail": "https://observatoriodamineracao.com.br/wp-content/uploads/2026/09/factsheet_nordeste_destaque.png",
+    "resumo": "O Nordeste concentra hoje boa parte dos investimentos em energia renovável do país e se tornou uma das frentes da corrida por minerais críticos. É a segunda região com mais processos minerários sobre assentamentos rurais, com 40% do total nacional, atrás apenas da Amazônia Legal. Nos nove estados, o cobre soma 536 requerimentos sobre 278 […] O post Factsheet – Nordeste apareceu primeiro em Observatório da Mineração .",
+    "data_publicacao": "2026-09-24T13:20:42+00:00",
+    "id": "172eb7fe5e3c70a3",
+    "fonte": "Observatório da Mineração",
+    "site_id": "observatorio-da-mineracao",
+    "grupo": "observatorio",
+    "data_captura": "2026-09-25T11:23:31.936615+00:00"
+  },
+  {
+    "link": "https://sumauma.com/taua-mirim-e-a-disputa-pela-maior-riqueza-da-vida/",
+    "titulo": "Tauá-Mirim e a disputa pela maior riqueza da vida",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/09/16170805/01.resextaua_abre.webp",
+    "resumo": "Na Amazônia maranhense, cerca de 2,2 mil famílias esperam há mais de duas décadas por um decreto que cria uma reserva extrativista; enquanto isso, portos e mineradoras avançam sobre o lugar",
+    "data_publicacao": "2026-09-24T03:11:31+00:00",
+    "id": "7fe609b26eba6533",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-09-25T11:23:34.701558+00:00"
   }
 ]
