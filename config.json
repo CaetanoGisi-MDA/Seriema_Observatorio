@@ -10,7 +10,7 @@
           "url_feed": "https://osociobio.org.br/feed/",
           "url_sitemap": "",
           "url_base": "https://osociobio.org.br",
-          "ultima_novidade": "2026-10-01T12:39:44.794286+00:00",
+          "ultima_novidade": "2026-10-02T12:03:58.226594+00:00",
           "alerta": false,
           "motivo_alerta": null
         },
@@ -32,7 +32,7 @@
           "url_feed": "https://observatoriodamineracao.com.br/feed/",
           "url_sitemap": "",
           "url_base": "https://observatoriodamineracao.com.br",
-          "ultima_novidade": "2026-10-01T12:39:47.544749+00:00",
+          "ultima_novidade": "2026-10-02T12:04:00.434050+00:00",
           "alerta": false,
           "motivo_alerta": null
         },
@@ -43,7 +43,7 @@
           "url_feed": "https://ispn.org.br/feed/",
           "url_sitemap": "",
           "url_base": "https://ispn.org.br",
-          "ultima_novidade": "2026-10-01T12:39:49.317592+00:00",
+          "ultima_novidade": "2026-10-02T12:04:02.097211+00:00",
           "alerta": false,
           "motivo_alerta": null
         },
@@ -54,7 +54,7 @@
           "url_feed": "https://sumauma.com/feed/",
           "url_sitemap": "",
           "url_base": "",
-          "ultima_novidade": "2026-09-30T12:06:25.765603+00:00",
+          "ultima_novidade": "2026-10-02T12:04:03.416855+00:00",
           "alerta": false,
           "motivo_alerta": null
         }
@@ -75,7 +75,8 @@
         "2026-05",
         "2026-06",
         "2026-07",
-        "2026-08"
+        "2026-08",
+        "2026-09"
       ]
     }
   }

@@ -1,29 +1,5 @@
 [
   {
-    "link": "https://observatoriodamineracao.com.br/factsheet-terras-raras/",
-    "titulo": "Factsheet – Terras Raras",
-    "thumbnail": "https://observatoriodamineracao.com.br/wp-content/uploads/2026/09/Captura-de-tela-2026-09-01-101449.png",
-    "resumo": "O Brasil tem uma das maiores reservas de terras raras do mundo, grupo de minerais usado em veículos elétricos, turbinas eólicas, eletrônicos e na indústria de defesa. A produção nacional, porém, ainda é pequena e restrita à etapa de menor valor: o país exporta concentrado e não domina o refino nem a fabricação de ímãs, […] O post Factsheet – Terras Raras apareceu primeiro em Observatório da Mineração .",
-    "data_publicacao": "2026-09-01T13:12:13+00:00",
-    "id": "19582e35bf94c31d",
-    "fonte": "Observatório da Mineração",
-    "site_id": "observatorio-da-mineracao",
-    "grupo": "observatorio",
-    "data_captura": "2026-09-02T10:51:20.730572+00:00"
-  },
-  {
-    "link": "https://ispn.org.br/noticia/ecos-dos-territorios-oficina-reune-comunidades-do-cerrado-caatinga-e-amazonia-para-troca-de-saberes/",
-    "titulo": "Ecos dos Territórios: oficina reúne comunidades do Cerrado, Caatinga e Amazônia para troca de saberes",
-    "thumbnail": "https://ispn.org.br/wp-content/uploads/2026/09/20260819_111245-scaled.jpg",
-    "resumo": "Entre os dias 18 e 20 de agosto, evento em Brasília (DF) teve a participação de 98 representantes de 50 projetos aprovados nos 38º e 39º editais do Fundo Ecos",
-    "data_publicacao": "2026-09-01T14:13:07+00:00",
-    "id": "07e47086dc460bd9",
-    "fonte": "ISPN",
-    "site_id": "ispn",
-    "grupo": "observatorio",
-    "data_captura": "2026-09-02T10:51:23.182160+00:00"
-  },
-  {
     "link": "https://sumauma.com/covid-19-diante-do-desafio-da-verdade-o-estado-nao-pode-ser-espectador/",
     "titulo": "Covid-19: diante do desafio da verdade, o Estado não pode ser espectador",
     "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/08/27153604/01.deisy_covid_abre-1.webp",
@@ -562,5 +538,17 @@
     "site_id": "observatorio-da-mineracao",
     "grupo": "observatorio",
     "data_captura": "2026-10-01T12:39:47.544713+00:00"
+  },
+  {
+    "link": "https://sumauma.com/exclusivo-r-r-soares-usa-templos-e-rede-de-televisao-para-campanha-de-filhos-deputados/",
+    "titulo": "Exclusivo: R.R. Soares usa templos e rede de televisão para campanha de filhos deputados",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/09/30174109/01.rrsoares_abre.webp",
+    "resumo": "Vídeos analisados por SUMAÚMA levantam suspeitas de abuso de poder político e econômico e mau uso de meio de comunicação e podem levar à cassação de candidaturas",
+    "data_publicacao": "2026-10-01T15:15:56+00:00",
+    "id": "d11dffd098aa5c0d",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-10-02T12:04:03.416838+00:00"
   }
 ]
