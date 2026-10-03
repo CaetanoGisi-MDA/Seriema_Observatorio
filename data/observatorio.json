@@ -1,17 +1,5 @@
 [
   {
-    "link": "https://sumauma.com/covid-19-diante-do-desafio-da-verdade-o-estado-nao-pode-ser-espectador/",
-    "titulo": "Covid-19: diante do desafio da verdade, o Estado não pode ser espectador",
-    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/08/27153604/01.deisy_covid_abre-1.webp",
-    "resumo": "Lembrar graves violações de direitos humanos sem evocar causas e responsabilidades é uma prática nociva: todos têm direito a saber o que de fato aconteceu na pandemia, que matou mais de 700 mil brasileiros",
-    "data_publicacao": "2026-09-03T10:01:08+00:00",
-    "id": "9597ebc3db4fc0c5",
-    "fonte": "Sumaúma",
-    "site_id": "sumauma",
-    "grupo": "observatorio",
-    "data_captura": "2026-09-03T10:51:30.380226+00:00"
-  },
-  {
     "link": "https://sumauma.com/neidinha-surui-e-cacique-ninawa-huni-kui-debatem-com-sumauma-como-repovoar-o-congresso/",
     "titulo": "Neidinha Suruí e cacique Ninawá Huni Kuĩ debatem com SUMAÚMA como repovoar o Congresso",
     "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/09/04110703/01.debate_neidinha_ninawa_logoefaixa.webp",
@@ -550,5 +538,17 @@
     "site_id": "sumauma",
     "grupo": "observatorio",
     "data_captura": "2026-10-02T12:04:03.416838+00:00"
+  },
+  {
+    "link": "https://sumauma.com/pt-busca-retomada-eleitoral-numa-amazonia-mais-evangelica-e-penetrada-pelo-agronegocio/",
+    "titulo": "PT busca retomada eleitoral numa Amazônia mais evangélica e penetrada pelo agronegócio",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/09/29172958/01.ptamazonia_abre.webp",
+    "resumo": "Políticas de apoio à expansão ruralista dos governos petistas contribuíram para o esfacelamento de sua bases populares tradicionais na região",
+    "data_publicacao": "2026-10-02T13:41:44+00:00",
+    "id": "4bd38340632af1fb",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-10-03T11:16:12.977233+00:00"
   }
 ]
