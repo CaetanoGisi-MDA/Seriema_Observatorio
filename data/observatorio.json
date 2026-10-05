@@ -1,29 +1,5 @@
 [
   {
-    "link": "https://sumauma.com/neidinha-surui-e-cacique-ninawa-huni-kui-debatem-com-sumauma-como-repovoar-o-congresso/",
-    "titulo": "Neidinha Suruí e cacique Ninawá Huni Kuĩ debatem com SUMAÚMA como repovoar o Congresso",
-    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/09/04110703/01.debate_neidinha_ninawa_logoefaixa.webp",
-    "resumo": "Terceiro encontro da série mediada por Eliane Brum reúne candidatas e candidatos dispostos a mudar a Câmara de Deputados e o Senado",
-    "data_publicacao": "2026-09-04T18:21:32+00:00",
-    "id": "89bfa3165eee8072",
-    "fonte": "Sumaúma",
-    "site_id": "sumauma",
-    "grupo": "observatorio",
-    "data_captura": "2026-09-05T10:08:48.091332+00:00"
-  },
-  {
-    "link": "https://sumauma.com/radio-sumauma-episodio-2-colapso-saude-manto-tupinamba/",
-    "titulo": "Escute agora: colapso do clima, saúde na Floresta e Manto Tupinambá",
-    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/09/04145452/caparadio2.webp",
-    "resumo": "O novo episódio da Rádio SUMAÚMA está nos principais tocadores e no YouTube",
-    "data_publicacao": "2026-09-04T18:03:39+00:00",
-    "id": "244e3eb8a284b695",
-    "fonte": "Sumaúma",
-    "site_id": "sumauma",
-    "grupo": "observatorio",
-    "data_captura": "2026-09-05T10:08:48.091350+00:00"
-  },
-  {
     "link": "https://observatoriodamineracao.com.br/relatorio-da-anm-levanta-hipotese-de-drenagem-acida-em-mina-da-lundin-em-goias-mas-vistoria-de-tres-orgaos-nao-coletou-amostras/",
     "titulo": "Relatório da ANM levanta hipótese de drenagem ácida em mina da Lundin em Goiás, mas vistoria de três órgãos não coletou amostras",
     "thumbnail": "https://observatoriodamineracao.com.br/wp-content/uploads/2026/09/c02b7dbc-cc75-4502-ab76-3a3626388675-scaled-1.jpg",
@@ -550,5 +526,65 @@
     "site_id": "sumauma",
     "grupo": "observatorio",
     "data_captura": "2026-10-03T11:16:12.977233+00:00"
+  },
+  {
+    "link": "https://sumauma.com/flavio-bolsonaro-na-frente-de-lula-o-que-isso-diz-de-um-povo/",
+    "titulo": "Flávio Bolsonaro na frente de Lula: o que isso diz de um povo?",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/10/05002441/01.editorial_1turno_abre2.webp",
+    "resumo": "Brasileiras e brasileiros dormiram neste 4 de outubro com um Congresso ainda mais violento que o atual, eleito pelo seu voto – e com o candidato de extrema direita saindo na frente na disputa para o segundo turno",
+    "data_publicacao": "2026-10-05T02:46:01+00:00",
+    "id": "dd4b773827781bb0",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-10-05T13:55:16.358310+00:00"
+  },
+  {
+    "link": "https://sumauma.com/urnas-distantes-dos-territorios-criam-barreira-para-voto-de-povos-da-floresta/",
+    "titulo": "Urnas distantes dos territórios criam barreira para voto de povos da Floresta",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/10/04205654/01.materiaguilherme_abre.webp",
+    "resumo": "Longos deslocamentos fazem com que o direito de votar dependa de muito esforço e por vezes acabe sendo interditado",
+    "data_publicacao": "2026-10-05T01:10:18+00:00",
+    "id": "99de34fb61fe4235",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-10-05T13:55:16.358363+00:00"
+  },
+  {
+    "link": "https://sumauma.com/quando-rondonia-rejeita-neidinha-surui-rejeita-a-floresta/",
+    "titulo": "Quando Rondônia rejeita Neidinha Suruí, rejeita a Floresta",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/10/04195309/01.neidinha_abre.webp",
+    "resumo": "Derrota eleitoral de uma das maiores defensoras da Amazônia, que disputava vaga no Senado, expõe violência de gênero e negação da emergência climática num dos estados mais bolsonaristas e desmatados do Brasil",
+    "data_publicacao": "2026-10-05T00:19:52+00:00",
+    "id": "35c0c1bed01b9995",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-10-05T13:55:16.358370+00:00"
+  },
+  {
+    "link": "https://sumauma.com/lula-ou-flavio-bolsonaro-veja-como-votou-a-amazonia-em-2026/",
+    "titulo": "Lula ou Flávio Bolsonaro: veja como votou a Amazônia em 2026",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/10/04221317/01.aovivoeleicoes_mapa_7.webp",
+    "resumo": "Mapa de SUMAÚMA mostra a apuração para presidente em cada município da maior floresta tropical do planeta, cujo futuro depende do resultado destas eleições",
+    "data_publicacao": "2026-10-04T20:02:39+00:00",
+    "id": "159f7a54ee393683",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-10-05T13:55:16.358374+00:00"
+  },
+  {
+    "link": "https://sumauma.com/amazonia-vota-em-meio-a-fumaca-e-a-incerteza/",
+    "titulo": "Amazônia vota em meio à fumaça e à incerteza",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/10/04151014/01.manauseleicoes_abre.webp",
+    "resumo": "Eleitores que sofreram com as queimadas das últimas semanas vão às urnas sem que a defesa da Floresta tenha entrado de verdade no debate",
+    "data_publicacao": "2026-10-04T18:50:33+00:00",
+    "id": "0a11549f44c1584c",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-10-05T13:55:16.358378+00:00"
   }
 ]
