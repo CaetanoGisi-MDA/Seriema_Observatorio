@@ -1,17 +1,5 @@
 [
   {
-    "link": "https://sumauma.com/raoni-tem-cancer-e-recebe-assistencia-medica-e-espiritual/",
-    "titulo": "Raoni tem câncer e recebe assistência médica e espiritual",
-    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/09/15103100/01.raoni_saude_abre.webp",
-    "resumo": "O maior líder indígena brasileiro é atendido por uma equipe de saúde e por pajés de sua confiança na casa em Peixoto de Azevedo, Mato Grosso, a cidade mais perto de sua terra, a Capoto/Jarina, onde é amparado também pelo afeto de sua família",
-    "data_publicacao": "2026-09-15T14:19:55+00:00",
-    "id": "a9c35b0482c8cd20",
-    "fonte": "Sumaúma",
-    "site_id": "sumauma",
-    "grupo": "observatorio",
-    "data_captura": "2026-09-16T11:01:45.800378+00:00"
-  },
-  {
     "link": "https://ispn.org.br/nota-institucional/ispn-apoio-cacique-pistola/",
     "titulo": "ISPN manifesta apoio ao Cacique Antonio Wilson Guajajara e alerta para a criminalização de lideranças indígenas",
     "thumbnail": "https://ispn.org.br/wp-content/uploads/2026/09/IMG_8761.jpg",
@@ -478,5 +466,41 @@
     "site_id": "sumauma",
     "grupo": "observatorio",
     "data_captura": "2026-10-15T11:01:02.859525+00:00"
+  },
+  {
+    "link": "https://observatoriodamineracao.com.br/empresario-com-projetos-de-litio-e-terras-raras-e-o-maior-doador-individual-das-campanhas-de-flavio-bolsonaro-e-lula/",
+    "titulo": "Empresário com projetos de lítio e terras raras é o maior doador individual das campanhas de Flávio Bolsonaro e Lula",
+    "thumbnail": "https://observatoriodamineracao.com.br/wp-content/uploads/2026/10/image-2026-09-07T150348.241.jpg",
+    "resumo": "Por Maurício Angelo e Lúcio Lambranho A análise da prestação de contas da campanha presidencial de Flávio Bolsonaro feita pelo Observatório da Mineração identificou 21 doadores com vínculos documentados com o setor de mineração. Juntos, eles repassaram R$ 1,6 milhão, o equivalente a 2% da receita total declarada pela campanha. No topo da lista de […] O post Empresário com projetos de lítio e terras raras é o maior doador individual das campanhas de Flávio Bolsonaro e Lula apareceu primeiro em Observatório da Mineração .",
+    "data_publicacao": "2026-10-15T13:35:09+00:00",
+    "id": "6a1a6bc8b03eb420",
+    "fonte": "Observatório da Mineração",
+    "site_id": "observatorio-da-mineracao",
+    "grupo": "observatorio",
+    "data_captura": "2026-10-16T10:56:49.577918+00:00"
+  },
+  {
+    "link": "https://sumauma.com/a-terceira-via-esta-disposta-a-arriscar-a-democracia/",
+    "titulo": "A ‘terceira via’ está disposta a arriscar a democracia?",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/10/15140742/01.direita_abre-1.webp",
+    "resumo": "Os eleitores que rejeitam Lula mas não votaram em Flávio Bolsonaro no primeiro turno terão que decidir se entregarão a Constituição do país à sanha do bolsonarismo",
+    "data_publicacao": "2026-10-15T18:53:05+00:00",
+    "id": "422284aad8c4869f",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-10-16T10:56:54.089948+00:00"
+  },
+  {
+    "link": "https://sumauma.com/gado-soja-ouro-ilegal-e-mineracao-os-cabos-eleitorais-de-flavio-bolsonaro-na-amazonia/",
+    "titulo": "Gado, soja, ouro ilegal e mineração: os cabos eleitorais de Flávio Bolsonaro na Amazônia",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/10/14164426/01.eleicoes_agro_abre-1.webp",
+    "resumo": "Preferência por bolsonarismo segue a geografia do desmatamento, da expansão da pecuária, das lavouras de soja e do garimpo ilegal; onde a floresta está mais intacta, Lula tende a ter mais votos",
+    "data_publicacao": "2026-10-15T14:32:38+00:00",
+    "id": "9c1511a3e4c3a2ec",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-10-16T10:56:54.089965+00:00"
   }
 ]
