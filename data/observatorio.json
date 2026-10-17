@@ -1,17 +1,5 @@
 [
   {
-    "link": "https://ispn.org.br/nota-institucional/ispn-apoio-cacique-pistola/",
-    "titulo": "ISPN manifesta apoio ao Cacique Antonio Wilson Guajajara e alerta para a criminalização de lideranças indígenas",
-    "thumbnail": "https://ispn.org.br/wp-content/uploads/2026/09/IMG_8761.jpg",
-    "resumo": "Instituto defende que a atuação de Antonio Wilson Guajajara na proteção da Terra Indígena Caru e na defesa dos direitos de seu povo seja analisada à luz do contexto de ausência do Estado e das garantias constitucionais.",
-    "data_publicacao": "2026-09-16T20:59:49+00:00",
-    "id": "f89e3609183c8803",
-    "fonte": "ISPN",
-    "site_id": "ispn",
-    "grupo": "observatorio",
-    "data_captura": "2026-09-17T11:12:20.294500+00:00"
-  },
-  {
     "link": "https://ispn.org.br/artigo-de-opiniao/financiamento-climatico-a-partir-dos-territorios-recursos-poder-e-justica-socioambiental/",
     "titulo": "Financiamento climático a partir dos territórios: recursos,  poder e justiça socioambiental",
     "thumbnail": "https://ispn.org.br/wp-content/uploads/2026/09/Cristiane-Azevedo-Ecos-dos-Territorios.png",
@@ -22,18 +10,6 @@
     "site_id": "ispn",
     "grupo": "observatorio",
     "data_captura": "2026-09-18T10:45:43.116054+00:00"
-  },
-  {
-    "link": "https://sumauma.com/por-que-o-congresso-ganhou-tanto-poder-e-por-que-isso-torna-mais-dificil-renova-lo/",
-    "titulo": "Por que o Congresso ganhou tanto poder? E por que isso torna mais difícil renová-lo?",
-    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/09/16155945/01.congressopoder_abre.webp",
-    "resumo": "Emendas impositivas e orçamento secreto garantiram a deputados e senadores mais controle do orçamento federal e, com isso, mais barganha política em seus redutos eleitorais e menos debate real sobre as necessidades do país",
-    "data_publicacao": "2026-09-17T03:13:26+00:00",
-    "id": "75e1012d27560c9f",
-    "fonte": "Sumaúma",
-    "site_id": "sumauma",
-    "grupo": "observatorio",
-    "data_captura": "2026-09-18T10:45:44.315618+00:00"
   },
   {
     "link": "https://sumauma.com/do-amapa-e-do-maranhao-kleber-karipuna-e-vania-do-mst-debatem-como-levar-a-floresta-para-o-congresso/",
@@ -502,5 +478,53 @@
     "site_id": "sumauma",
     "grupo": "observatorio",
     "data_captura": "2026-10-16T10:56:54.089965+00:00"
+  },
+  {
+    "link": "https://osociobio.org.br/rdc-49/apos-pressao-resolucao-sanitaria-que-reconhece-praticas-tradicionais-esta-mantida/?utm_source=rss&utm_medium=rss&utm_campaign=apos-pressao-resolucao-sanitaria-que-reconhece-praticas-tradicionais-esta-mantida",
+    "titulo": "Após pressão, resolução sanitária que reconhece práticas tradicionais está mantida",
+    "thumbnail": "https://osociobio.org.br/site/wp-content/uploads/2026/10/1-RS106694_20220708_fellipeabreu_rionegro_135924-1-1024x683.jpg",
+    "resumo": "RDC 49 da Anvisa que considera costumes e conhecimentos tradicionais estava em risco de ser revogada. Com mobilização do Consea, movimentos sociais e organizações, a agência reguladora informou que norma será mantida e atualizada O post Após pressão, resolução sanitária que reconhece práticas tradicionais está mantida apareceu primeiro em ÓSócioBio .",
+    "data_publicacao": "2026-10-16T20:49:37+00:00",
+    "id": "7dc323c1685e2826",
+    "fonte": "ÓSocioBio",
+    "site_id": "osociobio",
+    "grupo": "observatorio",
+    "data_captura": "2026-10-17T10:18:20.128477+00:00"
+  },
+  {
+    "link": "https://sumauma.com/em-video-eliane-brum-pode-acontecer-bolsonarismo-ganhar-eleicao/",
+    "titulo": "Em VÍDEO | Eliane Brum diz o que pode acontecer se o bolsonarismo ganhar a eleição",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/10/16185032/01.editorial_abre.webp",
+    "resumo": "Se Flávio Bolsonaro vencer o segundo turno, há uma grande probabilidade de a Floresta deixar de existir como floresta",
+    "data_publicacao": "2026-10-16T22:27:32+00:00",
+    "id": "2671ee7330bc3c32",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-10-17T10:22:58.270119+00:00"
+  },
+  {
+    "link": "https://sumauma.com/radio-sumauma-meu-territorio-esta-queimando-neste-momento/",
+    "titulo": "Rádio SUMAÚMA: ‘Meu território está queimando neste momento’",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/10/09130933/02.elninoincendio_fogo.webp",
+    "resumo": "O programa da semana fala da pressão do bolsonarismo nos terrítórios e das conexões dos incêndios que atingem a Amazônia com a mudanças climáticas, o El Niño e o cenário político do Brasil",
+    "data_publicacao": "2026-10-16T20:55:05+00:00",
+    "id": "4a56ec46f59e134f",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-10-17T10:22:58.270131+00:00"
+  },
+  {
+    "link": "https://sumauma.com/bilionario-fundo-eleitoral-mantem-distorcoes-e-e-uma-das-causas-de-desempenho-frustrante-de-indigenas-nas-urnas/",
+    "titulo": "Bilionário, Fundo Eleitoral mantém distorções e é uma das causas de desempenho frustrante de Indígenas nas urnas",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/10/16145853/01.verbafundo_abre-1.webp",
+    "resumo": "Só sete candidaturas de povos originários receberam mais de 1 milhão de reais dos partidos, enquanto 159 deputados ruralistas reeleitos tiveram verba pública milionária",
+    "data_publicacao": "2026-10-16T19:38:53+00:00",
+    "id": "8d744e474fad4f8b",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-10-17T10:22:58.270135+00:00"
   }
 ]
