@@ -1,17 +1,5 @@
 [
   {
-    "link": "https://sumauma.com/tartarugas-e-bichos-preguica-para-exportacao-a-ascensao-e-queda-das-irmas-ferreyra/",
-    "titulo": "Tartarugas e bichos-preguiça para exportação: a ascensão e queda das irmãs Ferreyra",
-    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/09/25165106/01.irmasferreyra_abre-1.webp",
-    "resumo": "Investigação de SUMAÚMA, Ojo Público (Peru) e CasaMacondo (Colômbia) reconstrói a trajetória de duas peruanas acusadas de liderar uma organização internacional dedicada a enviar ilegalmente animais silvestres da Amazônia para diversos países",
-    "data_publicacao": "2026-09-27T11:34:33+00:00",
-    "id": "d78c003db97ecf53",
-    "fonte": "Sumaúma",
-    "site_id": "sumauma",
-    "grupo": "observatorio",
-    "data_captura": "2026-09-27T11:37:43.878107+00:00"
-  },
-  {
     "link": "https://sumauma.com/no-oiapoque-o-petroleo-e-promessa-que-nao-define-eleicao/",
     "titulo": "No Oiapoque, o petróleo é promessa que não define eleição",
     "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/09/24102320/01.oiapoque_abre-1.webp",
@@ -622,5 +610,29 @@
     "site_id": "sumauma",
     "grupo": "observatorio",
     "data_captura": "2026-10-26T12:27:27.968178+00:00"
+  },
+  {
+    "link": "https://ispn.org.br/noticia/quilombo-capoeira-constroi-protocolo-de-consulta-para-fortalecer-a-defesa-do-territorio-e-da-identidade-quilombola/",
+    "titulo": "Quilombo Capoeira constrói protocolo de consulta para fortalecer a defesa do território e da identidade quilombola",
+    "thumbnail": "https://ispn.org.br/wp-content/uploads/2026/10/liderancas-quilombo-capoeira-20261022.png",
+    "resumo": "Oficina realizada com apoio do Projeto Restaura Maranhão reuniu moradores e lideranças para definir como a comunidade quer ser consultada antes de decisões e intervenções que possam afetar seus modos de vida e seu patrimônio natural e cultural",
+    "data_publicacao": "2026-10-26T18:32:48+00:00",
+    "id": "a2200d2d0691656b",
+    "fonte": "ISPN",
+    "site_id": "ispn",
+    "grupo": "observatorio",
+    "data_captura": "2026-10-27T11:45:51.634634+00:00"
+  },
+  {
+    "link": "https://sumauma.com/vitoria-de-lula-inspira-mobilizacao-contra-a-extrema-direita-no-mundo/",
+    "titulo": "Vitória de Lula inspira mobilização contra a extrema direita no mundo",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/10/26174610/01.lulainternacional_abre.webp",
+    "resumo": "Estadunidenses, franceses e espanhóis ligam resultados às eleições que enfrentarão, e latino-americanos veem início da reversão da onda reacionária na região",
+    "data_publicacao": "2026-10-26T21:20:06+00:00",
+    "id": "e8b8418e3b31fffd",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-10-27T11:45:52.755268+00:00"
   }
 ]
