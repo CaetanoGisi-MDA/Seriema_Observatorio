@@ -1,29 +1,5 @@
 [
   {
-    "link": "https://sumauma.com/as-vesperas-da-eleicao-liderancas-indigenas-de-mato-grosso-e-santa-catarina-discutem-como-repovoar-o-congresso/",
-    "titulo": "Lideranças indígenas de Mato Grosso e Santa Catarina discutem como Repovoar o Congresso",
-    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/09/29110329/1.debate_darlenekerexu_logoefundo-1.webp",
-    "resumo": "Darlene Taukane, primeira mulher indígena a se tornar mestra em educação, e Kerexu Yxapyry, ex-secretária Nacional de Direitos Territoriais Indígenas no governo federal, conversam ao vivo com SUMAÚMA nesta quarta",
-    "data_publicacao": "2026-09-29T18:09:38+00:00",
-    "id": "de0ef7341b7c76a5",
-    "fonte": "Sumaúma",
-    "site_id": "sumauma",
-    "grupo": "observatorio",
-    "data_captura": "2026-09-30T12:06:25.765576+00:00"
-  },
-  {
-    "link": "https://sumauma.com/qual-a-diferenca-entre-um-deputado-e-um-senador/",
-    "titulo": "Qual a diferença entre um deputado e um senador?",
-    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/09/28133603/ABRE.webp",
-    "resumo": "Sabe de quantos votos um deputado precisa para ser eleito? E qual a diferença entre votar na pessoa ou na legenda? A gente explica neste quadrinho",
-    "data_publicacao": "2026-09-29T14:16:25+00:00",
-    "id": "44c4ca6d9d1e652a",
-    "fonte": "Sumaúma",
-    "site_id": "sumauma",
-    "grupo": "observatorio",
-    "data_captura": "2026-09-30T12:06:25.765598+00:00"
-  },
-  {
     "link": "https://observatoriodamineracao.com.br/factsheet-litio/",
     "titulo": "Factsheet – Lítio",
     "thumbnail": "https://observatoriodamineracao.com.br/wp-content/uploads/2026/09/factsheet_litio_destaque.png",
@@ -622,5 +598,41 @@
     "site_id": "sumauma",
     "grupo": "observatorio",
     "data_captura": "2026-10-28T12:19:55.268154+00:00"
+  },
+  {
+    "link": "https://osociobio.org.br/sociobio-nas-urnas/sociobio-nas-urnas-das-eleicoes-a-construcao-de-um-novo-futuro-para-o-brasil-carta-aberta-do-coletivo-osociobio/?utm_source=rss&utm_medium=rss&utm_campaign=sociobio-nas-urnas-das-eleicoes-a-construcao-de-um-novo-futuro-para-o-brasil-carta-aberta-do-coletivo-osociobio",
+    "titulo": "Sociobio nas Urnas: das eleições à construção de um novo futuro para o Brasil Carta aberta do coletivo ÓSociobio",
+    "thumbnail": "https://osociobio.org.br/site/wp-content/uploads/2026/09/CARROSSEL-2-GERAL-1-1.jpg",
+    "resumo": "As eleições de 2026 reafirmam a importância da democracia e da participação política na construção do futuro que queremos para o Brasil. O post Sociobio nas Urnas: das eleições à construção de um novo futuro para o Brasil Carta aberta do coletivo ÓSociobio apareceu primeiro em ÓSócioBio .",
+    "data_publicacao": "2026-10-29T14:31:47+00:00",
+    "id": "f0339f1b5d97e5b2",
+    "fonte": "ÓSocioBio",
+    "site_id": "osociobio",
+    "grupo": "observatorio",
+    "data_captura": "2026-10-30T12:20:23.186936+00:00"
+  },
+  {
+    "link": "https://observatoriodamineracao.com.br/projetos-minerais-que-ameacam-reserva-ambiental-no-sul-da-bahia-reunem-interesses-de-filho-de-trump-mineradora-australiana-e-empresa-vinculada-ao-banco-master/",
+    "titulo": "Projetos minerais que ameaçam reserva ambiental no sul da Bahia reúnem interesses de filho de Trump, mineradora australiana e empresa vinculada ao Banco Master",
+    "thumbnail": "https://observatoriodamineracao.com.br/wp-content/uploads/2026/10/cassuruba_futuri.jpg",
+    "resumo": "O interesse mineral no entorno de uma área de proteção ambiental no sul da Bahia tem 41 processos minerários registrados na Agência Nacional de Mineração (ANM), todos dentro da zona de amortecimento da Reserva Extrativista (RESEX) de Cassurubá. A unidade de conservação federal de uso sustentável foi criada em junho de 2009 com uma área […] O post Projetos minerais que ameaçam reserva ambiental no sul da Bahia reúnem interesses de filho de Trump, mineradora australiana e empresa vinculada ao Banco Master apareceu primeiro em Observatório da Mineração .",
+    "data_publicacao": "2026-10-29T16:40:18+00:00",
+    "id": "40bf9e0ea1bbb73c",
+    "fonte": "Observatório da Mineração",
+    "site_id": "observatorio-da-mineracao",
+    "grupo": "observatorio",
+    "data_captura": "2026-10-30T12:20:26.922069+00:00"
+  },
+  {
+    "link": "https://sumauma.com/lula-avanca-em-polos-do-agro-e-amplia-votacao-em-99-dos-municipios-da-amazonia/",
+    "titulo": "Lula avança em polos do agro e amplia votação em 99% dos municípios da Amazônia",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/10/29120739/01.votoslulaamazonia_abre-1.webp",
+    "resumo": "Com avanço no Pará e vantagem decisiva no Maranhão, Lula reverteu derrotas do primeiro turno e venceu em quase 59% dos municípios amazônicos; Flávio Bolsonaro ganhou em cinco estados, mas viu vantagem derreter entre turnos",
+    "data_publicacao": "2026-10-29T19:07:43+00:00",
+    "id": "95baf79637f0c277",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-10-30T12:20:30.615991+00:00"
   }
 ]
