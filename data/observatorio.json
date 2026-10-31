@@ -1,17 +1,5 @@
 [
   {
-    "link": "https://observatoriodamineracao.com.br/factsheet-litio/",
-    "titulo": "Factsheet – Lítio",
-    "thumbnail": "https://observatoriodamineracao.com.br/wp-content/uploads/2026/09/factsheet_litio_destaque.png",
-    "resumo": "Os pegmatitos do Vale do Jequitinhonha (MG) sustentam quase toda a produção brasileira de lítio. Em 2024, a produção chegou a 944 mil toneladas de concentrado de espodumênio, uma alta de 71% sobre o ano anterior, o que corresponde a cerca de 4% da oferta mundial. O Brasil ocupa a 7ª posição no ranking global […] O post Factsheet – Lítio apareceu primeiro em Observatório da Mineração .",
-    "data_publicacao": "2026-09-30T18:37:47+00:00",
-    "id": "333db41b7463d53c",
-    "fonte": "Observatório da Mineração",
-    "site_id": "observatorio-da-mineracao",
-    "grupo": "observatorio",
-    "data_captura": "2026-10-01T12:39:47.544713+00:00"
-  },
-  {
     "link": "https://sumauma.com/exclusivo-r-r-soares-usa-templos-e-rede-de-televisao-para-campanha-de-filhos-deputados/",
     "titulo": "Exclusivo: R.R. Soares usa templos e rede de televisão para campanha de filhos deputados",
     "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/09/30174109/01.rrsoares_abre.webp",
@@ -634,5 +622,29 @@
     "site_id": "sumauma",
     "grupo": "observatorio",
     "data_captura": "2026-10-30T12:20:30.615991+00:00"
+  },
+  {
+    "link": "https://sumauma.com/matar-essas-pragas-pf-investiga-denuncias-de-violencia-contra-indigenas-durante-eleicao/",
+    "titulo": "‘Matar essas pragas’: PF investiga denúncias de violência contra Indígenas durante e depois da eleição",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/10/30164923/01.Abre_Ataqueseleicoes_SemMold-2.webp",
+    "resumo": "Áudios com ameaças circulam em Mato Grosso do Sul. O estado acumula a maior parte dos casos e tem morte suspeita em apuração. Também há relatos de ataques no Rio Grande do Sul, em São Paulo e no Pará",
+    "data_publicacao": "2026-10-30T20:35:03+00:00",
+    "id": "b3efbb21544035f8",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-10-31T11:51:13.739789+00:00"
+  },
+  {
+    "link": "https://sumauma.com/o-povo-nao-tem-algoritmo/",
+    "titulo": "O povo não tem algoritmo",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/10/30121833/01.soniaguajajara_abre-1.webp",
+    "resumo": "Virada de Lula na eleição brasileira mostrou a força da mobilização popular – mas o futuro da Amazônia (e do mundo) continuará sendo disputado",
+    "data_publicacao": "2026-10-30T16:41:29+00:00",
+    "id": "b5c0dbcec1e2bd0b",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-10-31T11:51:13.739806+00:00"
   }
 ]
