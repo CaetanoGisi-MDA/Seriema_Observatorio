@@ -10,7 +10,7 @@
           "url_feed": "https://osociobio.org.br/feed/",
           "url_sitemap": "",
           "url_base": "https://osociobio.org.br",
-          "ultima_novidade": "2026-10-31T11:51:06.955342+00:00",
+          "ultima_novidade": "2026-11-01T12:50:26.674958+00:00",
           "alerta": false,
           "motivo_alerta": null
         },
@@ -21,7 +21,7 @@
           "url_feed": "https://oeco.org.br/author/observatorio-do-clima/feed/",
           "url_sitemap": "",
           "url_base": "https://oeco.org.br/source/observatorio-do-clima/",
-          "ultima_novidade": "2026-10-31T11:51:08.375878+00:00",
+          "ultima_novidade": "2026-11-01T12:50:28.238499+00:00",
           "alerta": false,
           "motivo_alerta": null
         },
@@ -32,7 +32,7 @@
           "url_feed": "https://observatoriodamineracao.com.br/feed/",
           "url_sitemap": "",
           "url_base": "https://observatoriodamineracao.com.br",
-          "ultima_novidade": "2026-10-31T11:51:10.076696+00:00",
+          "ultima_novidade": "2026-11-01T12:50:29.681247+00:00",
           "alerta": false,
           "motivo_alerta": null
         },
@@ -43,7 +43,7 @@
           "url_feed": "https://ispn.org.br/feed/",
           "url_sitemap": "",
           "url_base": "https://ispn.org.br",
-          "ultima_novidade": "2026-10-31T11:51:11.314707+00:00",
+          "ultima_novidade": "2026-11-01T12:50:31.761150+00:00",
           "alerta": false,
           "motivo_alerta": null
         },
@@ -76,7 +76,8 @@
         "2026-06",
         "2026-07",
         "2026-08",
-        "2026-09"
+        "2026-09",
+        "2026-10"
       ]
     }
   }
