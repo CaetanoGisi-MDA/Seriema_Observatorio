@@ -1,29 +1,5 @@
 [
   {
-    "link": "https://ispn.org.br/noticia/producao-agroecologica-fortalece-autonomia-das-familias-na-terra-indigena-pindare/",
-    "titulo": "Produção agroecológica fortalece autonomia das famílias na Terra Indígena Pindaré",
-    "thumbnail": "https://ispn.org.br/wp-content/uploads/2026/10/ti-pindare-picarra-preta-20261009-1024x577.jpg",
-    "resumo": "Iniciativas apoiadas pelo ISPN promovem produção de alimentos, organização comunitária e protagonismo das mulheres Guajajara, valorizando práticas agroecológicas e o cuidado com o território",
-    "data_publicacao": "2026-10-13T13:06:01+00:00",
-    "id": "3d3350969492c43f",
-    "fonte": "ISPN",
-    "site_id": "ispn",
-    "grupo": "observatorio",
-    "data_captura": "2026-10-13T13:46:35.065822+00:00"
-  },
-  {
-    "link": "https://sumauma.com/como-enfrentar-os-incendios-agravados-pelo-el-nino-na-amazonia/",
-    "titulo": "Como enfrentar os incêndios agravados pelo El Niño na Amazônia",
-    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/10/09130950/01.elninoincendio_abre-1.webp",
-    "resumo": "SUMAÚMA conversa com a autora de uma nova série de livros que oferece orientações para a prevenção e o combate aos incêndios florestais",
-    "data_publicacao": "2026-10-13T12:52:07+00:00",
-    "id": "e3548c8cba204fb9",
-    "fonte": "Sumaúma",
-    "site_id": "sumauma",
-    "grupo": "observatorio",
-    "data_captura": "2026-10-13T13:46:36.741646+00:00"
-  },
-  {
     "link": "https://ispn.org.br/noticia/organizacoes-indigenas-do-mosaico-gurupi-reunem-se-para-discutir-fortalecimento-da-gestao-territorial-e-restauracao-florestal/",
     "titulo": "Organizações indígenas do Mosaico Gurupi reúnem-se para discutir fortalecimento da gestão territorial e restauração florestal",
     "thumbnail": "https://ispn.org.br/wp-content/uploads/2026/10/seminario-mosaico-gurupi-01-1017x1024.jpg",
@@ -586,5 +562,53 @@
     "site_id": "sumauma",
     "grupo": "observatorio",
     "data_captura": "2026-11-11T13:44:36.814347+00:00"
+  },
+  {
+    "link": "https://osociobio.org.br/cop31/rede-osociobio-na-cop31-fortalece-agenda-da-sociobioeconomia/?utm_source=rss&utm_medium=rss&utm_campaign=rede-osociobio-na-cop31-fortalece-agenda-da-sociobioeconomia",
+    "titulo": "Rede ÓSocioBio na COP31 fortalece agenda da sociobioeconomia",
+    "thumbnail": "https://osociobio.org.br/site/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-11-at-17.09.44-300x169.jpeg",
+    "resumo": "Organizações integrantes da Rede levam ao centro dos debates da 31ª Conferência das Nações Unidas sobre Mudanças Climáticas, em Antalya, na Turquia, pautas e iniciativas que valorizam os povos, os territórios e as economias da sociobiodiversidade. O post Rede ÓSocioBio na COP31 fortalece agenda da sociobioeconomia apareceu primeiro em ÓSócioBio .",
+    "data_publicacao": "2026-11-11T20:24:48+00:00",
+    "id": "2c957cf3183ae037",
+    "fonte": "ÓSocioBio",
+    "site_id": "osociobio",
+    "grupo": "observatorio",
+    "data_captura": "2026-11-12T14:47:43.525193+00:00"
+  },
+  {
+    "link": "https://observatoriodamineracao.com.br/mineracao-na-fronteira-brasileira-pode-avancar-sobre-areas-protegidas-em-rondonia-e-pressionar-territorios-em-mato-grosso/",
+    "titulo": "Mineração na fronteira brasileira pode avançar sobre áreas protegidas em Rondônia e pressionar territórios em Mato Grosso",
+    "thumbnail": "https://observatoriodamineracao.com.br/wp-content/uploads/2026/11/Assentimentos-Previos-Aura-1024x724.jpeg",
+    "resumo": "Por Lúcio Lambranho e Maurício Angelo Depois de mostrar como Aura, Santa Elina e Tarauacá obtiveram aval do Conselho de Defesa Nacional (CDN) para processos minerários em mais de 175 mil hectares na faixa de fronteira, o Observatório da Mineração examina, nesta segunda reportagem, onde incidem outros pedidos de empresas do Grupo Santa Elina. Em […] O post Mineração na fronteira brasileira pode avançar sobre áreas protegidas em Rondônia e pressionar territórios em Mato Grosso apareceu primeiro em Observatório da Mineração .",
+    "data_publicacao": "2026-11-11T15:00:35+00:00",
+    "id": "9ea38d16513a12a0",
+    "fonte": "Observatório da Mineração",
+    "site_id": "observatorio-da-mineracao",
+    "grupo": "observatorio",
+    "data_captura": "2026-11-12T14:47:46.021058+00:00"
+  },
+  {
+    "link": "https://ispn.org.br/nota-institucional/ispn-e-ieb-repudiam-incendio-criminoso-na-ti-tremembe-da-barra-do-mundau-e-cobram-apuracao-rigorosa-e-protecao-ao-territorio/",
+    "titulo": "ISPN e IEB repudiam incêndio criminoso na TI Tremembé da Barra do Mundaú e cobram apuração rigorosa e proteção ao território",
+    "thumbnail": "https://ispn.org.br/wp-content/uploads/2026/11/capa.png",
+    "resumo": "Os institutos manifestam solidariedade ao povo Tremembé diante dos recentes ataques no Ceará e reafirmam a urgência da garantia da posse exclusiva, da segurança e da conservação socioambiental da Terra Indígena",
+    "data_publicacao": "2026-11-11T18:00:30+00:00",
+    "id": "9e6fd29b9e0a6606",
+    "fonte": "ISPN",
+    "site_id": "ispn",
+    "grupo": "observatorio",
+    "data_captura": "2026-11-12T14:47:47.789351+00:00"
+  },
+  {
+    "link": "https://ispn.org.br/noticia/sementes-frutos-restauracao-e-agroecologia-fortalecem-a-adaptacao-climatica-de-comunidades-no-tocantins/",
+    "titulo": "Sementes, frutos, restauração e agroecologia fortalecem a adaptação climática de comunidades no Tocantins",
+    "thumbnail": "https://ispn.org.br/wp-content/uploads/2026/11/20261007_165414-scaled.jpg",
+    "resumo": "Na APA Ilha do Bananal/Cantão, iniciativas comunitárias de geração de renda e uso sustentável da biodiversidade fortalecem a resiliência do território e são alternativas diante do avanço do agronegócio, da concentração de terras e dos efeitos das mudanças climáticas",
+    "data_publicacao": "2026-11-11T17:11:36+00:00",
+    "id": "7c0943e0ed21f92f",
+    "fonte": "ISPN",
+    "site_id": "ispn",
+    "grupo": "observatorio",
+    "data_captura": "2026-11-12T14:47:47.789367+00:00"
   }
 ]
