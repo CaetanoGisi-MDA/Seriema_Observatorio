@@ -1,29 +1,5 @@
 [
   {
-    "link": "https://ispn.org.br/noticia/organizacoes-indigenas-do-mosaico-gurupi-reunem-se-para-discutir-fortalecimento-da-gestao-territorial-e-restauracao-florestal/",
-    "titulo": "Organizações indígenas do Mosaico Gurupi reúnem-se para discutir fortalecimento da gestão territorial e restauração florestal",
-    "thumbnail": "https://ispn.org.br/wp-content/uploads/2026/10/seminario-mosaico-gurupi-01-1017x1024.jpg",
-    "resumo": "Seminário promovido pelo ISPN marcou encerramento do Projeto Gestão e Restauração de Terras Indígenas do Mosaico Gurupi e o lançamento de nova iniciativa de restauração",
-    "data_publicacao": "2026-10-14T12:16:47+00:00",
-    "id": "1ec25c37068d59cd",
-    "fonte": "ISPN",
-    "site_id": "ispn",
-    "grupo": "observatorio",
-    "data_captura": "2026-10-15T11:01:01.717957+00:00"
-  },
-  {
-    "link": "https://sumauma.com/editorial-veiculos-de-jornalismo-se-unem-pela-democracia/",
-    "titulo": "Editorial: veículos de jornalismo se unem pela democracia",
-    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/10/13172927/01.editorial_ImprensaSemMoldura.webp",
-    "resumo": "Manifesto de 55 jornais brasileiros alerta sobre o perigo que a eleição de Flávio Bolsonaro representa para a imprensa e para as instituições do país",
-    "data_publicacao": "2026-10-14T13:00:18+00:00",
-    "id": "c5aed8e9f02a3fb2",
-    "fonte": "Sumaúma",
-    "site_id": "sumauma",
-    "grupo": "observatorio",
-    "data_captura": "2026-10-15T11:01:02.859525+00:00"
-  },
-  {
     "link": "https://observatoriodamineracao.com.br/empresario-com-projetos-de-litio-e-terras-raras-e-o-maior-doador-individual-das-campanhas-de-flavio-bolsonaro-e-lula/",
     "titulo": "Empresário com projetos de lítio e terras raras é o maior doador individual das campanhas de Flávio Bolsonaro e Lula",
     "thumbnail": "https://observatoriodamineracao.com.br/wp-content/uploads/2026/10/image-2026-09-07T150348.241.jpg",
@@ -610,5 +586,41 @@
     "site_id": "ispn",
     "grupo": "observatorio",
     "data_captura": "2026-11-12T14:47:47.789367+00:00"
+  },
+  {
+    "link": "https://osociobio.org.br/pnae/experiencias-dos-povos-do-rio-negro-am-com-alimentacao-escolar-sao-levadas-a-onu-em-roma/?utm_source=rss&utm_medium=rss&utm_campaign=experiencias-dos-povos-do-rio-negro-am-com-alimentacao-escolar-sao-levadas-a-onu-em-roma",
+    "titulo": "Experiências dos povos do Rio Negro (AM) com alimentação escolar são levadas à ONU, em Roma",
+    "thumbnail": "https://osociobio.org.br/site/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-06-at-09.52.15-1.jpeg",
+    "resumo": "Presidente da Associação Indígena da Etnia Tuyuka (Aietum), Cenaide Pastor relatou ao Comitê de Segurança Alimentar Mundial como indígenas fornecem alimentos tradicionais para as escolas em São Gabriel da Cachoeira (AM) O post Experiências dos povos do Rio Negro (AM) com alimentação escolar são levadas à ONU, em Roma apareceu primeiro em ÓSócioBio .",
+    "data_publicacao": "2026-11-12T17:01:22+00:00",
+    "id": "861eb9796c201017",
+    "fonte": "ÓSocioBio",
+    "site_id": "osociobio",
+    "grupo": "observatorio",
+    "data_captura": "2026-11-13T14:07:20.860156+00:00"
+  },
+  {
+    "link": "https://observatoriodamineracao.com.br/projetos-de-lei-tentam-flexibilizar-reduzir-ou-eliminar-a-faixa-de-fronteira/",
+    "titulo": "Projetos de lei tentam flexibilizar, reduzir ou eliminar a faixa de fronteira",
+    "thumbnail": "https://observatoriodamineracao.com.br/wp-content/uploads/2026/11/floresta_amazonica211016ebc0667-1024x613.jpg",
+    "resumo": "O avanço da mineração pela faixa de fronteira, como mostramos nas duas primeiras matérias da série, que revelaram os requerimentos de empresas do grupo Aura e Santa Elina, o assentimento prévio do Conselho de Defesa Nacional e o risco que áreas protegidas em Rondônia e no Mato Grosso correm, encontra eco em articulação legislativa no […] O post Projetos de lei tentam flexibilizar, reduzir ou eliminar a faixa de fronteira apareceu primeiro em Observatório da Mineração .",
+    "data_publicacao": "2026-11-13T13:24:18+00:00",
+    "id": "ae49a739e4459934",
+    "fonte": "Observatório da Mineração",
+    "site_id": "observatorio-da-mineracao",
+    "grupo": "observatorio",
+    "data_captura": "2026-11-13T14:07:23.130063+00:00"
+  },
+  {
+    "link": "https://sumauma.com/roteiro-internacional-para-eliminacao-do-petroleo-poe-em-xeque-exploracao-no-litoral-da-amazonia/",
+    "titulo": "Roteiro internacional para eliminação do petróleo põe em xeque exploração no litoral da Amazônia",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/11/11124222/01.mapadocaminho_abre-1.webp",
+    "resumo": "Documento da presidência brasileira da COP30 sugere uma redução da oferta de combustíveis fósseis no início da próxima década, justamente quando se prevê que a extração na Bacia da Foz do Amazonas comece; apesar disso, o governo Lula pretende manter nova frente petrolífera na região",
+    "data_publicacao": "2026-11-12T18:06:09+00:00",
+    "id": "b2f5298a0667e25b",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-11-13T14:07:25.594254+00:00"
   }
 ]
