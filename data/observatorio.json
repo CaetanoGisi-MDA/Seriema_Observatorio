@@ -622,5 +622,53 @@
     "site_id": "sumauma",
     "grupo": "observatorio",
     "data_captura": "2026-11-13T14:07:25.594254+00:00"
+  },
+  {
+    "link": "https://ispn.org.br/noticia/povos-e-comunidades-tradicionais-cobram-do-governo-decreto-para-regularizacao-dos-territorios/",
+    "titulo": "Povos e comunidades tradicionais cobram do governo decreto para regularização dos territórios",
+    "thumbnail": "https://ispn.org.br/wp-content/uploads/2026/11/cop31-Boulos-20261113-1024x768.jpg",
+    "resumo": "Carta entregue a autoridades na COP31 pede assinatura do decreto em 10 de dezembro, Dia dos Direitos Humanos. Proposta resulta de anos de mobilização e diálogo com o governo federal",
+    "data_publicacao": "2026-11-13T20:14:58+00:00",
+    "id": "098b17695cd88609",
+    "fonte": "ISPN",
+    "site_id": "ispn",
+    "grupo": "observatorio",
+    "data_captura": "2026-11-14T13:08:11.300732+00:00"
+  },
+  {
+    "link": "https://ispn.org.br/noticia/comunidades-locais-levam-cinco-demandas-a-reuniao-de-alto-nivel-na-cop31/",
+    "titulo": "Comunidades locais levam cinco demandas à reunião de alto nível na COP31",
+    "thumbnail": "https://ispn.org.br/wp-content/uploads/2026/11/cop31-Justine-Akpene-20261113.png",
+    "resumo": "Em diálogo com a presidência da COP31, em Antália, na Turquia, representantes da África, Ásia e América Latina e Caribe apresentam cinco demandas para garantir participação efetiva e acesso direto ao financiamento climático",
+    "data_publicacao": "2026-11-13T18:11:23+00:00",
+    "id": "7b96d90eefcc5806",
+    "fonte": "ISPN",
+    "site_id": "ispn",
+    "grupo": "observatorio",
+    "data_captura": "2026-11-14T13:08:11.300756+00:00"
+  },
+  {
+    "link": "https://sumauma.com/radio-sumauma-uma-conversa-sobre-cop31-como-ser-selvagem-e-corpo-flauta/",
+    "titulo": "Escute agora: o que acontece na COP31, como ser selvagem e o que diz um corpo-flauta",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/11/13115623/radio_13nov_abre.webp",
+    "resumo": "Como o Brasil chega à Turquia e o que os Indígenas cobram dos governantes? Na Rádio SUMAÚMA desta semana, vozes do jornalismo, da Floresta, das ciências e uma desconversa de futebol",
+    "data_publicacao": "2026-11-13T20:54:47+00:00",
+    "id": "10dff82fd568afe7",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-11-14T13:08:13.775669+00:00"
+  },
+  {
+    "link": "https://sumauma.com/exclusivo-os-bois-a-soja-e-os-milhoes-que-impedem-a-demarcacao-da-terra-de-raoni-ha-70-anos/",
+    "titulo": "Exclusivo: os bois, a soja e os milhões que impedem a demarcação da terra de Raoni há 70 anos",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/11/11180234/01.defensores_raoni_aerea_abre-1.webp",
+    "resumo": "Por seis meses, SUMAÚMA investigou as engrenagens que barram a proteção do território onde o maior líder indígena no Brasil cresceu. Encontramos uma rede de relacionamentos que movimenta créditos de bancos nacionais e internacionais e abastece multinacionais",
+    "data_publicacao": "2026-11-13T16:09:54+00:00",
+    "id": "274c2ef4df6adb1d",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-11-14T13:08:13.775688+00:00"
   }
 ]
