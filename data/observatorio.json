@@ -1,17 +1,5 @@
 [
   {
-    "link": "https://sumauma.com/justica-eleitoral-descumpre-regra-de-transporte-e-indigenas-e-ribeirinhos-ficam-sem-votar/",
-    "titulo": "Justiça Eleitoral descumpre regra de transporte e Indígenas e Ribeirinhos ficam sem votar",
-    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/10/19121257/01.abstencaoindigena_abre.webp",
-    "resumo": "Levantamento de SUMAÚMA mostra como o direito político não é igual para todos: mais de 70% dos Territórios Indígenas não têm seção eleitoral; deslocamento difícil levou à abstenção acima da média em áreas onde os povos originários votam",
-    "data_publicacao": "2026-10-19T19:32:15+00:00",
-    "id": "e0d2d102774271e2",
-    "fonte": "Sumaúma",
-    "site_id": "sumauma",
-    "grupo": "observatorio",
-    "data_captura": "2026-10-20T11:05:17.285674+00:00"
-  },
-  {
     "link": "https://observatoriodamineracao.com.br/novo-relatorio-global-revela-que-bancos-destinaram-us-595-bilhoes-a-empresas-ligadas-ao-colapso-da-biodiversidade-incluindo-mineradoras/",
     "titulo": "Novo relatório global revela que bancos destinaram US$ 595 bilhões a empresas ligadas ao colapso da biodiversidade, incluindo mineradoras",
     "thumbnail": "https://observatoriodamineracao.com.br/wp-content/uploads/2026/10/Imagem-do-ChatGPT-20-de-out.-de-2026-14_57_45-4-819x1024.png",
@@ -34,18 +22,6 @@
     "site_id": "sumauma",
     "grupo": "observatorio",
     "data_captura": "2026-10-21T11:21:35.323910+00:00"
-  },
-  {
-    "link": "https://sumauma.com/em-video-tanto-faz-lula-ou-bolsonaro-por-eliane-brum/",
-    "titulo": "Em VÍDEO | Tanto faz Lula ou Bolsonaro? Por Eliane Brum",
-    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/10/20120904/eliane_video_2turno.webp",
-    "resumo": "Pra você, que não votou no primeiro turno, que votou nulo ou branco e ainda não decidiu o que fazer neste 25 de outubro, temos um recado importante",
-    "data_publicacao": "2026-10-20T15:23:01+00:00",
-    "id": "8ce0577118c600c1",
-    "fonte": "Sumaúma",
-    "site_id": "sumauma",
-    "grupo": "observatorio",
-    "data_captura": "2026-10-21T11:21:35.323927+00:00"
   },
   {
     "link": "https://sumauma.com/apoie-sumauma-floresta-vai-precisar-ainda-mais-de-voce/",
@@ -658,5 +634,65 @@
     "site_id": "sumauma",
     "grupo": "observatorio",
     "data_captura": "2026-11-18T15:17:21.658993+00:00"
+  },
+  {
+    "link": "https://observatoriodamineracao.com.br/latin-america-calls-for-rights-and-justice-in-the-face-of-the-global-minerals-agenda/",
+    "titulo": "Latin America Calls for Rights and Justice in the Face of the Global Minerals Agenda",
+    "thumbnail": "https://observatoriodamineracao.com.br/wp-content/uploads/2026/11/Captura-de-tela-2026-11-19-105118.png",
+    "resumo": "The undersigned Latin American organizations are concerned about the current geopolitical landscape, which continues to place our region at the center of global extractive conflicts, threatening its ecological and sociocultural value, as well as the rights and ways of life of the peoples and communities who inhabit these territories. In recent years, minerals such as […] O post Latin America Calls for Rights and Justice in the Face of the Global Minerals Agenda apareceu primeiro em Observatório da Mineração .",
+    "data_publicacao": "2026-11-19T13:53:01+00:00",
+    "id": "5aee001031f89468",
+    "fonte": "Observatório da Mineração",
+    "site_id": "observatorio-da-mineracao",
+    "grupo": "observatorio",
+    "data_captura": "2026-11-19T15:24:18.919265+00:00"
+  },
+  {
+    "link": "https://ispn.org.br/noticia/safra-do-jatoba-de-2026-mobiliza-comunidades-e-fortalece-cadeia-de-valor-da-sociobiodiversidade-no-tocantins/",
+    "titulo": "Safra do jatobá de 2026 mobiliza comunidades e fortalece cadeia de valor da Sociobiodiversidade no Tocantins",
+    "thumbnail": "https://ispn.org.br/wp-content/uploads/2026/11/Farinhada-do-Jatoba-Tocantins-Torra-da-Farinha-1024x577.jpg",
+    "resumo": "As farinhadas reúnem comunidades de diferentes regiões do estado para compartilhar conhecimentos, beneficiar os frutos e ampliar as oportunidades de comercialização da farinha de jatobá",
+    "data_publicacao": "2026-11-19T13:53:56+00:00",
+    "id": "6afd4830f8d544d3",
+    "fonte": "ISPN",
+    "site_id": "ispn",
+    "grupo": "observatorio",
+    "data_captura": "2026-11-19T15:24:19.935659+00:00"
+  },
+  {
+    "link": "https://ispn.org.br/noticia/analise-do-solo-orienta-restauracao-produtiva-e-fortalece-a-agricultura-familiar-no-maranhao/",
+    "titulo": "Análise do solo orienta restauração produtiva e fortalece a agricultura familiar no Maranhão",
+    "thumbnail": "https://ispn.org.br/wp-content/uploads/2026/11/amostras-de-solo-20261116-768x1024.jpg",
+    "resumo": "Coleta de amostras de solos nos assentamentos atendidos pelo Projeto Restaura Maranhão contribui para conhecer a terra e planejar Sistemas Agroflorestais que conciliam produção de alimentos e conservação ambiental",
+    "data_publicacao": "2026-11-18T17:06:45+00:00",
+    "id": "6abe7616c5f46eae",
+    "fonte": "ISPN",
+    "site_id": "ispn",
+    "grupo": "observatorio",
+    "data_captura": "2026-11-19T15:24:19.935677+00:00"
+  },
+  {
+    "link": "https://sumauma.com/entre-o-fogo-e-o-silencio-a-ameaca-as-vidas-humanas-e-mais-que-humanas-em-alter-do-chao/",
+    "titulo": "Entre o fogo e o silêncio, a ameaça às vidas humanas e mais-que-humanas em Alter do Chão",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/11/18115857/01_abre_Fogo-AlterIMG_8068.webp",
+    "resumo": "Incêndios criminosos devoram a mata e ameaçam quatipurus, jabutis, peixes e pássaros. Diante do horror, o povo Borari envia guardiões para proteger a Floresta, a memória e os lugares sagrados de seus ancestrais",
+    "data_publicacao": "2026-11-19T03:03:16+00:00",
+    "id": "3837153d60ae6f8b",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-11-19T15:24:23.090917+00:00"
+  },
+  {
+    "link": "https://sumauma.com/sao-sobreviventes-indigenas-em-isolamento-voluntario-aparecem-na-ti-arariboia-no-maranhao/",
+    "titulo": "‘São sobreviventes’: Indígenas em isolamento voluntário aparecem na TI Araribóia no Maranhão",
+    "thumbnail": "https://s3.amazonaws.com/wp-sumauma.com/wp-content/uploads/2026/11/18164522/01_abre_Isolados_Captura-de-pantalla-2026-11-18-a-las-14.48.55.webp",
+    "resumo": "Busca por água e comida é uma das hipóteses para explicar deslocamento de integrantes do povo Awa Guajá, diz pesquisador; risco de contágio por doenças nessa população é a maior preocupação no momento",
+    "data_publicacao": "2026-11-18T21:54:57+00:00",
+    "id": "a6e817b0f0f6fe2a",
+    "fonte": "Sumaúma",
+    "site_id": "sumauma",
+    "grupo": "observatorio",
+    "data_captura": "2026-11-19T15:24:23.090954+00:00"
   }
 ]
